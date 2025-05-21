@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dydv4widw5b0g"]
+[gd_scene load_steps=8 format=3 uid="uid://dydv4widw5b0g"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_0tnc4"]
-[ext_resource type="PackedScene" uid="uid://c13tdea0800l1" path="res://Assets/House interior.glb" id="2_b0ex2"]
-[ext_resource type="PackedScene" uid="uid://cg6pbg6phllqb" path="res://Assets/Nice Door.glb" id="3_8ef1l"]
+[ext_resource type="PackedScene" uid="uid://c13tdea0800l1" path="res://House interior.glb" id="2_b0ex2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ue7wt"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -35,12 +34,6 @@ environment = SubResource("Environment_sjqe0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12519, 1.89035, 1.01567)
 script = ExtResource("1_0tnc4")
 
-[node name="CameraPivot" type="Node3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-
-[node name="Camera3D" type="Camera3D" parent="Player/CameraPivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.399597, 1.30568)
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_g6jgn")
@@ -49,8 +42,11 @@ mesh = SubResource("CapsuleMesh_g6jgn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.965973, 0)
 shape = SubResource("ConvexPolygonShape3D_ph0r7")
 
+[node name="CameraPivot" type="Node3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24824, -0.695374)
+
+[node name="Camera3D" type="Camera3D" parent="Player/CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.399597, 0.340463)
+
 [node name="HouseInterior" parent="." instance=ExtResource("2_b0ex2")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -1.88903, 2.51059, 1.37008)
-
-[node name="Nice Door" parent="." instance=ExtResource("3_8ef1l")]
-transform = Transform3D(1.5, 0, 0, 0, 2, 0, 0, 0, 1.5, -3.88665, 2.62333, 1.43759)
