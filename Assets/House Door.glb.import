@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cg6pbg6phllqb"
-path="res://.godot/imported/Nice Door.glb-e7b49f403db1dcfc8ebf95745c6b0817.scn"
+path="res://.godot/imported/House Door.glb-988ae51ffaf85fe50d03b9695e6a28f9.scn"
 
 [deps]
 
-source_file="res://Assets/Nice Door.glb"
-dest_files=["res://.godot/imported/Nice Door.glb-e7b49f403db1dcfc8ebf95745c6b0817.scn"]
+source_file="res://Assets/House Door.glb"
+dest_files=["res://.godot/imported/House Door.glb-988ae51ffaf85fe50d03b9695e6a28f9.scn"]
 
 [params]
 
