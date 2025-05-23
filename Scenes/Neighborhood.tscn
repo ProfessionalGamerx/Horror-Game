@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dtxf8i5olxw1e"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1_p68gc"]
-[ext_resource type="PackedScene" uid="uid://cnv1vvq87yhim" path="res://Characters/Little Man.glb" id="2_w1cky"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_0fbcq"]
+[ext_resource type="PackedScene" uid="uid://cnv1vvq87yhim" path="res://Characters/Little Man.glb" id="2_uodbf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j2v4v"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -36,7 +36,7 @@ size = Vector3(10, 0.002, 10)
 
 [node name="Player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.606412, 0.763296, 0.116175)
-script = ExtResource("1_p68gc")
+script = ExtResource("1_0fbcq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -51,5 +51,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.695374)
 [node name="Camera3D" type="Camera3D" parent="Player/Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.29981, 0)
 
-[node name="LittleMan" parent="." instance=ExtResource("2_w1cky")]
+[node name="LittleMan" parent="." instance=ExtResource("2_uodbf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.849, 1, 1.505)
