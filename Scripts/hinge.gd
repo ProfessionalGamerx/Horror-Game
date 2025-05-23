@@ -8,8 +8,10 @@ func _process(delta):
 	if Input.is_action_just_pressed("interact") and not is_door_open:
 		if not door_open_variable.is_playing():
 			door_open_variable.play("door_open")
+			await get_tree().create_timer(0.5).timeout
 			is_door_open = true
 	elif Input.is_action_just_pressed("interact") and is_door_open:
 		if not door_close_variable.is_playing():
 			door_close_variable.play("door_close")
+			await get_tree().create_timer(0.5).timeout
 			is_door_open = false

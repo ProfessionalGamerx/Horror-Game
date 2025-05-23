@@ -128,11 +128,11 @@ shape = SubResource("ConvexPolygonShape3D_ph0r7")
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -1.88903, 2.51059, 1.37008)
 
 [node name="Hinge" type="Node3D" parent="."]
-transform = Transform3D(-6.55671e-08, 0, -1.6, 0, 2.12, 0, 1.5, 0, -6.99382e-08, -3.89168, 2.73161, 0.433854)
+transform = Transform3D(-5.42999e-06, 0, -1.6, 0, 2.12, 0, 1.5, 0, -5.79198e-06, -3.89168, 2.73161, 0.433854)
 script = ExtResource("3_it138")
 
 [node name="House Door" parent="Hinge" instance=ExtResource("4_av24s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0244727, 0, 0.614464)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0244727, 0, 0.628617)
 
 [node name="Door Open Animation" type="AnimationPlayer" parent="Hinge"]
 root_node = NodePath("../..")
