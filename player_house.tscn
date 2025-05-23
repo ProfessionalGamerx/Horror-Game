@@ -97,7 +97,7 @@ script = ExtResource("3_mmgve")
 [node name="House Door" parent="Hinge" instance=ExtResource("3_8ef1l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0244727, 0, 0.614464)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Hinge"]
+[node name="DoorAnimation" type="AnimationPlayer" parent="Hinge"]
 root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_orrey")
