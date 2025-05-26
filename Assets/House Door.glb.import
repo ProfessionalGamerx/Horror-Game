@@ -35,9 +35,6 @@ _subresources={
 "nodes": {
 "PATH:group1559002970": {
 "generate/physics": true
-},
-"PATH:group1708765680": {
-"generate/physics": true
 }
 }
 }

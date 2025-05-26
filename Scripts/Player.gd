@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+@onready var ray = $CameraPivot/Camera3D/InteractRay
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -48,3 +49,12 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+func _process(delta):
+	if Input.is_action_just_pressed("interact"):
+		if ray.is_colliding():
+			var hit = ray.get_collider()
+			if hit.has_method("interact"):
+				hit.interact()
+			elif hit.get_parent() and hit.get_parent().has_method("interact"):
+				hit.get_parent().interact()
