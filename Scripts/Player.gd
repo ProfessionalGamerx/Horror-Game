@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@onready var ray = $CameraPivot/Camera3D/InteractRay
+@onready var ray: RayCast3D = $CameraPivot/Camera3D/InteractRay
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -54,7 +54,12 @@ func _process(delta):
 	if Input.is_action_just_pressed("interact"):
 		if ray.is_colliding():
 			var hit = ray.get_collider()
-			if hit.has_method("interact"):
-				hit.interact()
-			elif hit.get_parent() and hit.get_parent().has_method("interact"):
-				hit.get_parent().interact()
+			print("Ray hit:", hit)
+			var node = hit
+			while node:
+				if node.has_method("interact"):
+					print("Found interact method on:", node.name)
+					node.interact()
+					return
+				node = node.get_parent()
+			print("No interact method found on hit or any parent.")
