@@ -1,10 +1,12 @@
-[gd_scene load_steps=24 format=3 uid="uid://dydv4widw5b0g"]
+[gd_scene load_steps=30 format=3 uid="uid://dydv4widw5b0g"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_yip3o"]
 [ext_resource type="PackedScene" uid="uid://c13tdea0800l1" path="res://Assets/House interior.glb" id="2_hdfhb"]
 [ext_resource type="Script" path="res://Scripts/hinge.gd" id="3_it138"]
 [ext_resource type="PackedScene" uid="uid://cg6pbg6phllqb" path="res://Assets/House Door.glb" id="4_av24s"]
 [ext_resource type="Script" path="res://Scripts/hinge_2.gd" id="5_6hynl"]
+[ext_resource type="Script" path="res://Scripts/hinge_3.gd" id="6_cdyx4"]
+[ext_resource type="Script" path="res://Scripts/hinge_4.gd" id="7_exdfa"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ue7wt"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -29,14 +31,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/path = NodePath("Hinge4:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, -1.5708, 0)]
+"values": [Vector3(0, -3.14159, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_0f1qm"]
@@ -55,6 +57,22 @@ tracks/0/keys = {
 "values": [Vector3(0, -1.5708, 0), Vector3(0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_wu44e"]
+resource_name = "door_close4"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge4:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, 3.14159, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_5q27i"]
 resource_name = "door_open"
 length = 0.5
@@ -71,11 +89,29 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0), Vector3(0, -1.5708, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_q1o84"]
+resource_name = "door_open4"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge4:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0), Vector3(0, 1.5708, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bsjg7"]
 _data = {
 "RESET": SubResource("Animation_36b2k"),
 "door_close": SubResource("Animation_0f1qm"),
-"door_open": SubResource("Animation_5q27i")
+"door_close4": SubResource("Animation_wu44e"),
+"door_open": SubResource("Animation_5q27i"),
+"door_open4": SubResource("Animation_q1o84")
 }
 
 [sub_resource type="Animation" id="Animation_22u5i"]
@@ -155,14 +191,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge2:rotation")
+tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, -1.5708, 0)]
+"values": [Vector3(0, -3.14159, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_yugos"]
@@ -172,6 +208,22 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Hinge2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0), Vector3(0, -1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6c853"]
+resource_name = "door_close3"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -197,15 +249,33 @@ tracks/0/keys = {
 "values": [Vector3(0, -1.5708, 0), Vector3(0, -3.14159, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_x87sp"]
+resource_name = "door_open3"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5708, 0), Vector3(0, -3.14159, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_btems"]
 _data = {
 "RESET": SubResource("Animation_dkrg6"),
 "door_close2": SubResource("Animation_yugos"),
-"door_open2": SubResource("Animation_e2asr")
+"door_close3": SubResource("Animation_6c853"),
+"door_open2": SubResource("Animation_e2asr"),
+"door_open3": SubResource("Animation_x87sp")
 }
 
 [node name="PlayerHouse" type="Node3D"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-1, 0, -2.53518e-06, 0, 1, 0, 2.53518e-06, 0, -1, 0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
@@ -215,36 +285,36 @@ shadow_enabled = true
 environment = SubResource("Environment_sjqe0")
 
 [node name="Player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 1.12519, 1.89035, 1.01567)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12519, 1.89035, 1.01567)
 script = ExtResource("1_yip3o")
 
 [node name="CameraPivot" type="Node3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00362039, 1.7271, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Player/CameraPivot"]
-transform = Transform3D(1, 0, 7.10543e-15, 0, 0.666667, 0, -7.10543e-15, 0, 1, 0, 0.194175, 0.421537)
+transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0.004794, 0.000403404, 0.421537)
 
 [node name="InteractRay" type="RayCast3D" parent="Player/CameraPivot/Camera3D"]
-transform = Transform3D(-5.42999e-06, 0, -1.6, 0, 2.12, 0, 1.5, 0, -5.79198e-06, 0.13202, -0.142053, -0.844637)
+transform = Transform3D(-3.84081e-06, 0, -1.132, 0, 1.5, 0, 1.061, 0, -4.09783e-06, 0.13202, -0.142053, -0.844637)
 target_position = Vector3(-2, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1.3, 0, 0, 0, 1, 0, 0.959224, 0)
 mesh = SubResource("CapsuleMesh_g6jgn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.965973, 0)
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0.965973, 0)
 shape = SubResource("ConvexPolygonShape3D_ph0r7")
 
 [node name="HouseInterior" parent="." instance=ExtResource("2_hdfhb")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -1.88903, 2.51059, 1.37008)
 
 [node name="Hinge" type="Node3D" parent="."]
-transform = Transform3D(-5.42999e-06, 0, -1.6, 0, 2.12, 0, 1.5, 0, -5.79198e-06, -3.89168, 2.73161, 0.433854)
+transform = Transform3D(-5.42999e-06, 0, -1.7, 0, 2.12, 0, 1.5, 0, -6.15398e-06, -3.89168, 2.73161, 0.379707)
 script = ExtResource("3_it138")
 
 [node name="House Door" parent="Hinge" instance=ExtResource("4_av24s")]
-transform = Transform3D(1, 0, 0, 0, 0.999701, -0.0244322, 0, 0.0244322, 0.999702, 0.0244727, 0, 0.628617)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0244727, 0, 0.628617)
 
 [node name="DoorAnimations" type="AnimationPlayer" parent="Hinge"]
 root_node = NodePath("../..")
@@ -255,10 +325,10 @@ libraries = {
 autoplay = "door_close"
 
 [node name="Hinge2" type="Node3D" parent="."]
-transform = Transform3D(-5.42999e-06, 0, -1.6, 0, 2.12, 0, 1.5, 0, -5.79198e-06, -2.20265, 2.67572, -1.75557)
+transform = Transform3D(-5.42999e-06, 0, -1.7, 0, 2.12, 0, 1.5, 0, -6.15398e-06, -2.15234, 2.67572, -1.75557)
 script = ExtResource("5_6hynl")
 
-[node name="House Door2" parent="Hinge2" instance=ExtResource("4_av24s")]
+[node name="House Door" parent="Hinge2" instance=ExtResource("4_av24s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0244727, 0, 0.628617)
 
 [node name="DoorAnimations2" type="AnimationPlayer" parent="Hinge2"]
@@ -267,4 +337,29 @@ libraries = {
 "": SubResource("AnimationLibrary_btems")
 }
 
-[editable path="Hinge2/House Door2"]
+[node name="Hinge3" type="Node3D" parent="."]
+transform = Transform3D(-1.5, 0, -4.30981e-06, 0, 2.12, 0, 3.80277e-06, 0, -1.7, -0.10195, 2.67011, -2.98563)
+script = ExtResource("6_cdyx4")
+
+[node name="House Door" parent="Hinge3" instance=ExtResource("4_av24s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0244727, 0, 0.628617)
+
+[node name="DoorAnimations3" type="AnimationPlayer" parent="Hinge3"]
+libraries = {
+"": SubResource("AnimationLibrary_btems")
+}
+
+[node name="Hinge4" type="Node3D" parent="."]
+transform = Transform3D(-1.5, 0, -4.30981e-06, 0, 2.12, 0, 3.80277e-06, 0, -1.7, -1.78328, 2.72032, 3.8013)
+script = ExtResource("7_exdfa")
+
+[node name="House Door" parent="Hinge4" instance=ExtResource("4_av24s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0244727, 0, 0.628617)
+
+[node name="DoorAnimations4" type="AnimationPlayer" parent="Hinge4"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_bsjg7"),
+"door_animations": SubResource("AnimationLibrary_2t20k")
+}
+autoplay = "door_close"
