@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var anim = $"DoorAnimations3"
-@onready var is_open = true
+@onready var is_open = false
 
 func interact():
 	print("Interacted with", self.name)

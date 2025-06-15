@@ -1,0 +1,390 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://yi15300i4s82"
+path="res://.godot/imported/scene.gltf-83e99adb23f89043f4fce237bb2ff26b.scn"
+
+[deps]
+
+source_file="res://Assets/city/scene.gltf"
+dest_files=["res://.godot/imported/scene.gltf-83e99adb23f89043f4fce237bb2ff26b.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Cube_001/Cube_001_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Cube_002/Cube_002_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Cube_003/Cube_003_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Cylinder_004/Cylinder_004_onlytexture_004_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Cylinder_005/Cylinder_005_onlytexture_004_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Cylinder_006/Cylinder_006_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Cylinder_007/Cylinder_007_texture_004_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Icosphere_001/Icosphere_001_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Icosphere_007/Icosphere_007_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Icosphere_008/Icosphere_008_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Icosphere_008/Icosphere_008_vetro_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Icosphere_009/Icosphere_009_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Icosphere_010/Icosphere_010_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Plane_001/Plane_001_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Plane_002/Plane_002_onlytexture_003_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Plane_006/Plane_006_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/barber shop/barber shop_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/barber shop/barber shop_vetro_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/base casa_002/base casa_002_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/base casa_002/base casa_002_vetro_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/base casa_003/base casa_003_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/base casa_003/base casa_003_vetro_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/bus": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cartello P_006/cartello P_006_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cartello P_007/cartello P_007_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cartello P_008/cartello P_008_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cartello P_009/cartello P_009_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cartello P_010/cartello P_010_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cartello P_011/cartello P_011_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cartello direzione_002/cartello direzione_002_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cartello direzione_004/cartello direzione_004_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cartello direzione_007/cartello direzione_007_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cartello direzione_008/cartello direzione_008_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cartello direzione_010/cartello direzione_010_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cartello direzione_012/cartello direzione_012_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cartello triangolo_004/cartello triangolo_004_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cartello triangolo_005/cartello triangolo_005_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cartello triangolo_006/cartello triangolo_006_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cartello triangolo_007/cartello triangolo_007_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/casa_006/casa_006_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/casa_006/casa_006_vetro_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cespuglio_001/cespuglio_001_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cespuglio_002/cespuglio_002_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cespuglio_011/cespuglio_011_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cespuglio_012/cespuglio_012_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cespuglio_013/cespuglio_013_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cespuglio_014/cespuglio_014_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cespuglio_015/cespuglio_015_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/cespuglio_016/cespuglio_016_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/divieto rosso_002/divieto rosso_002_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/divieto rosso_003/divieto rosso_003_cartelli_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/ice cream camion/ice cream camion_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_001": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_002": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_003": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_004": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_005": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_007/macchina_007_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_008/macchina_008_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_009/macchina_009_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_010/macchina_010_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_011": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_012": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_013": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_014": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_015": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_016/macchina_016_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_017/macchina_017_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_018/macchina_018_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_019/macchina_019_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_020/macchina_020_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_021/macchina_021_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_022/macchina_022_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_023": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_024": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_025": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_026": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_027": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_028": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_029": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_030": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_031": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_032": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_033": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_034": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_035/macchina_035_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_036/macchina_036_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_037/macchina_037_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_038/macchina_038_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_039": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_040": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_041": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_042": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/macchina_043": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/panchina_001/panchina_001_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/pizzeria/pizzeria_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/pizzeria/pizzeria_mattoni_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/pizzeria/pizzeria_vetro_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/plane/plane_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/police station/police station_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/police station/police station_vetro_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/seemaforo_009/seemaforo_009_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/seemaforo_010/seemaforo_010_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/seemaforo_011/seemaforo_011_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/seemaforo_012/seemaforo_012_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/seemaforo_013/seemaforo_013_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/seemaforo_014/seemaforo_014_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/seemaforo_015/seemaforo_015_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/seemaforo_016/seemaforo_016_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/tenda_005/tenda_005_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/tenda_006/tenda_006_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/tenda_006/tenda_006_vetro_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/vetro_016/vetro_016_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/vetro_016/vetro_016_vetro_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/vetro_017/vetro_017_materiale base_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/vetro_017/vetro_017_vetro_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/vetro_019/vetro_019_vetro_0": {
+"generate/physics": true
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1
