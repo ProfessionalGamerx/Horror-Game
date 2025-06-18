@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dydv4widw5b0g"]
+[gd_scene load_steps=46 format=3 uid="uid://dydv4widw5b0g"]
 
 [ext_resource type="PackedScene" uid="uid://c13tdea0800l1" path="res://Assets/House interior.glb" id="2_hdfhb"]
 [ext_resource type="Script" path="res://Scripts/hinge.gd" id="3_it138"]
@@ -10,6 +10,8 @@
 [ext_resource type="Script" path="res://Assets/front_door.gd" id="10_frqmi"]
 [ext_resource type="PackedScene" uid="uid://c4x42wntkkch8" path="res://Assets/Front Door.glb" id="10_u2vgs"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="10_xg3y1"]
+[ext_resource type="Script" path="res://Scripts/InteractionUI.gd" id="11_nasj6"]
+[ext_resource type="PackedScene" uid="uid://cbeipvynrinsc" path="res://FadeTransition.tscn" id="12_rur1b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_42txf"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -475,14 +477,13 @@ libraries = {
 transform = Transform3D(-1.96701e-07, 0, 5, 0, 4.501, 0, -4.5, 0, -2.18557e-07, -1.00913, 0.384136, 8.0013)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7454, -0.458539, -7.70446)
-calculate_tangents = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.944492, -0.458539, 10.3984)
 use_collision = true
 size = Vector3(5.81702, 1, 2.10596)
 material = SubResource("StandardMaterial3D_3msun")
 
 [node name="Player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.57941, 6.01502, 0.426132)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.57941, 12.958, 0.426132)
 script = ExtResource("10_xg3y1")
 
 [node name="CameraPivot" type="Node3D" parent="Player"]
@@ -514,3 +515,36 @@ script = ExtResource("10_frqmi")
 libraries = {
 "": SubResource("AnimationLibrary_vckt2")
 }
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="InteractionUI" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_nasj6")
+
+[node name="InteractionPrompt" type="Label" parent="UI/InteractionUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -87.5
+offset_top = -28.0
+offset_right = 87.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "Press E to interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PromptAnimation" type="AnimationPlayer" parent="UI/InteractionUI/InteractionPrompt"]
+
+[node name="FadeTransition" parent="UI/InteractionUI" instance=ExtResource("12_rur1b")]
+layout_mode = 0

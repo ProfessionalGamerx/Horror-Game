@@ -7,7 +7,7 @@ var held_object: Node3D = null
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 5
-const SPRINT_MULTIPLIER = 1.6
+const SPRINT_MULTIPLIER = 1.8
 
 @export var mouse_sensitivity := 0.002
 var yaw := 0.0
@@ -33,6 +33,7 @@ func _unhandled_input(event):
 
 
 func _physics_process(delta):
+	var current_speed = SPEED
 	# Apply gravity
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -42,7 +43,6 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 
 	# Determine current speed
-	var current_speed = SPEED
 	if Input.is_action_pressed("sprint"):
 		current_speed *= SPRINT_MULTIPLIER
 
