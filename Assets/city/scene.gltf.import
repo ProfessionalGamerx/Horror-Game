@@ -78,6 +78,9 @@ _subresources={
 "PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Plane_002/Plane_002_onlytexture_003_0": {
 "generate/physics": true
 },
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Plane_006": {
+"import/skip_import": true
+},
 "PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/Plane_006/Plane_006_materiale base_0": {
 "generate/physics": true
 },
@@ -87,11 +90,17 @@ _subresources={
 "PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/barber shop/barber shop_vetro_0": {
 "generate/physics": true
 },
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/base casa_002": {
+"import/skip_import": true
+},
 "PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/base casa_002/base casa_002_materiale base_0": {
 "generate/physics": true
 },
 "PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/base casa_002/base casa_002_vetro_0": {
 "generate/physics": true
+},
+"PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/base casa_003": {
+"import/skip_import": true
 },
 "PATH:Sketchfab_model/96b091c9c1d84c59b08fdad3ff81acd0_fbx/RootNode/base casa_003/base casa_003_materiale base_0": {
 "generate/physics": true

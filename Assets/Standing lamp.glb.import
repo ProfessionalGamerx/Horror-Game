@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bjxulgvnpy7ud"
-path="res://.godot/imported/Bed Single.glb-74b8504d1523cf20e68818b1e1849050.scn"
+uid="uid://6qwgo2av1gb1"
+path="res://.godot/imported/Standing lamp.glb-624f7bbee2b8aead24a6ff655b7d7879.scn"
 
 [deps]
 
-source_file="res://Assets/Bed Single.glb"
-dest_files=["res://.godot/imported/Bed Single.glb-74b8504d1523cf20e68818b1e1849050.scn"]
+source_file="res://Assets/Standing lamp.glb"
+dest_files=["res://.godot/imported/Standing lamp.glb-624f7bbee2b8aead24a6ff655b7d7879.scn"]
 
 [params]
 
@@ -33,13 +33,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:bedSingle": {
-"generate/physics": true
-},
-"PATH:bedSingle_1": {
-"generate/physics": true
-},
-"PATH:cover": {
+"PATH:Standing_lamp_01_Circle_003": {
 "generate/physics": true
 }
 }

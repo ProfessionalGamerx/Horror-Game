@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dydv4widw5b0g"]
+[gd_scene load_steps=46 format=3 uid="uid://dydv4widw5b0g"]
 
 [ext_resource type="PackedScene" uid="uid://c13tdea0800l1" path="res://Assets/House interior.glb" id="2_hdfhb"]
 [ext_resource type="Script" path="res://Scripts/hinge.gd" id="3_it138"]
@@ -10,19 +10,15 @@
 [ext_resource type="Script" path="res://Assets/front_door.gd" id="10_frqmi"]
 [ext_resource type="PackedScene" uid="uid://c4x42wntkkch8" path="res://Assets/Front Door.glb" id="10_u2vgs"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="10_xg3y1"]
+[ext_resource type="PackedScene" uid="uid://cef0dqtg0fht8" path="res://Assets/Light Ceiling.glb" id="11_5w3jn"]
+[ext_resource type="PackedScene" uid="uid://ca3j0em43bhyh" path="res://Assets/Light bulb.glb" id="12_rcsda"]
+[ext_resource type="PackedScene" uid="uid://6qwgo2av1gb1" path="res://Assets/Standing lamp.glb" id="13_fi1xf"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_42txf"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
-[sub_resource type="Sky" id="Sky_klxrd"]
-sky_material = SubResource("ProceduralSkyMaterial_42txf")
-
-[sub_resource type="Environment" id="Environment_hg5v1"]
-background_mode = 2
-sky = SubResource("Sky_klxrd")
-tonemap_mode = 2
-glow_enabled = true
+[sub_resource type="Environment" id="Environment_8fws0"]
+background_mode = 1
+background_color = Color(0.118581, 0.118581, 0.118581, 1)
+ambient_light_color = Color(0.393086, 0.393086, 0.393085, 1)
+ambient_light_energy = 0.01
 
 [sub_resource type="Animation" id="Animation_36b2k"]
 length = 0.001
@@ -407,14 +403,18 @@ _data = {
 "door_open": SubResource("Animation_re4ya")
 }
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jnpqq"]
+albedo_color = Color(0.92549, 0.745098, 0.388235, 1)
+
 [node name="PlayerHouse" type="Node3D"]
 transform = Transform3D(-1, 0, -2.53518e-06, 0, 1, 0, 2.53518e-06, 0, -1, 0, 0, 0)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 1.99172e-06, 9.66674e-07, -1.99172e-06, 0.618696, 0.78563, 9.66674e-07, -0.78563, 0.618696, -3.53271e-05, 25.1219, 13.9348)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_hg5v1")
+environment = SubResource("Environment_8fws0")
+
+[node name="TVRoomLight" type="OmniLight3D" parent="."]
+transform = Transform3D(-1, 0, 2.53518e-06, 0, 1, 0, -2.53518e-06, 0, -1, -5.31393, 4.84108, 8.99981)
+omni_range = 10.0
 
 [node name="HouseInterior" parent="." instance=ExtResource("2_hdfhb")]
 transform = Transform3D(-5, 0, -7.54979e-07, 0, 5, 0, 7.54979e-07, 0, -5, -1.88903, 2.51059, 1.37008)
@@ -471,8 +471,8 @@ libraries = {
 "": SubResource("AnimationLibrary_fybgf")
 }
 
-[node name="Bed Single" parent="." instance=ExtResource("8_hiwax")]
-transform = Transform3D(-1.96701e-07, 0, 5, 0, 4.501, 0, -4.5, 0, -2.18557e-07, -1.00913, 0.384136, 8.0013)
+[node name="Bed" parent="." instance=ExtResource("8_hiwax")]
+transform = Transform3D(4.5, 0, 0, 0, 4.501, 0, 0, 0, 5, 6.32517, 0.384136, 6.61158)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7454, -0.458539, -7.70446)
@@ -482,7 +482,7 @@ size = Vector3(5.81702, 1, 2.10596)
 material = SubResource("StandardMaterial3D_3msun")
 
 [node name="Player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.57941, 6.01502, 0.426132)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.57941, 1.84405, 0.426132)
 script = ExtResource("10_xg3y1")
 
 [node name="CameraPivot" type="Node3D" parent="Player"]
@@ -514,3 +514,106 @@ script = ExtResource("10_frqmi")
 libraries = {
 "": SubResource("AnimationLibrary_vckt2")
 }
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.40802, 5.70875, 1.77558)
+use_collision = true
+size = Vector3(19.3529, 1, 22.0416)
+material = SubResource("StandardMaterial3D_jnpqq")
+
+[node name="LivingRoomLights" parent="." instance=ExtResource("11_5w3jn")]
+transform = Transform3D(-1.1, 0, 2.7887e-06, 0, 1.1, 0, -2.7887e-06, 0, -1.1, -6.56673, 5.21232, 1.98981)
+
+[node name="LivingRoomLight" type="OmniLight3D" parent="LivingRoomLights"]
+transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0, -1.30133, 0.281318)
+light_energy = 0.25
+light_indirect_energy = 0.25
+omni_range = 10.0
+
+[node name="LivingRoomLight2" type="OmniLight3D" parent="LivingRoomLights"]
+transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0.000255585, -0.945254, -0.285369)
+light_energy = 0.25
+light_indirect_energy = 0.25
+omni_range = 10.0
+
+[node name="LivingRoomLight3" type="OmniLight3D" parent="LivingRoomLights"]
+transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, -0.274827, -1.14796, -0.00146103)
+light_energy = 0.25
+light_indirect_energy = 0.25
+omni_range = 10.0
+
+[node name="LivingRoomLight4" type="OmniLight3D" parent="LivingRoomLights"]
+transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0.283109, -0.732068, -0.00146103)
+light_energy = 0.25
+light_indirect_energy = 0.25
+omni_range = 10.0
+
+[node name="LivingRoomLights2" parent="." instance=ExtResource("11_5w3jn")]
+transform = Transform3D(-1.1, 0, 2.7887e-06, 0, 1.1, 0, -2.7887e-06, 0, -1.1, -7.6128, 5.21232, -5.57771)
+
+[node name="LivingRoomLight" type="OmniLight3D" parent="LivingRoomLights2"]
+transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0, -1.30133, 0.281318)
+light_energy = 0.25
+light_indirect_energy = 0.25
+omni_range = 10.0
+
+[node name="LivingRoomLight2" type="OmniLight3D" parent="LivingRoomLights2"]
+transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0.000255585, -0.945254, -0.285369)
+light_energy = 0.25
+light_indirect_energy = 0.25
+omni_range = 10.0
+
+[node name="LivingRoomLight3" type="OmniLight3D" parent="LivingRoomLights2"]
+transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, -0.274827, -1.14796, -0.00146103)
+light_energy = 0.25
+light_indirect_energy = 0.25
+omni_range = 10.0
+
+[node name="LivingRoomLight4" type="OmniLight3D" parent="LivingRoomLights2"]
+transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0.283109, -0.732068, -0.00146103)
+light_energy = 0.25
+light_indirect_energy = 0.25
+omni_range = 10.0
+
+[node name="LivingRoomLights3" parent="." instance=ExtResource("11_5w3jn")]
+transform = Transform3D(-1.1, 0, 2.7887e-06, 0, 1.1, 0, -2.7887e-06, 0, -1.1, -11.1657, 5.21232, 1.6238)
+
+[node name="LivingRoomLight" type="OmniLight3D" parent="LivingRoomLights3"]
+transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0, -1.30133, 0.281318)
+light_energy = 0.25
+light_indirect_energy = 0.25
+omni_range = 10.0
+
+[node name="LivingRoomLight2" type="OmniLight3D" parent="LivingRoomLights3"]
+transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0.000255585, -0.945254, -0.285369)
+light_energy = 0.25
+light_indirect_energy = 0.25
+omni_range = 10.0
+
+[node name="LivingRoomLight3" type="OmniLight3D" parent="LivingRoomLights3"]
+transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, -0.274827, -1.14796, -0.00146103)
+light_energy = 0.25
+light_indirect_energy = 0.25
+omni_range = 10.0
+
+[node name="LivingRoomLight4" type="OmniLight3D" parent="LivingRoomLights3"]
+transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0.283109, -0.732068, -0.00146103)
+light_energy = 0.25
+light_indirect_energy = 0.25
+omni_range = 10.0
+
+[node name="Light bulb" parent="." instance=ExtResource("12_rcsda")]
+transform = Transform3D(-0.2, 1.74846e-08, 0, -1.74846e-08, -0.2, 0, 0, 0, 0.2, 0.337174, 5.07341, -4.25205)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Light bulb"]
+transform = Transform3D(5, -2.84245e-14, -9.09495e-13, 2.84189e-14, 5, 0, 9.09495e-13, 0, 5, 0, 1.33245, 0)
+omni_range = 10.0
+omni_attenuation = 0.5
+
+[node name="Standing lamp" parent="." instance=ExtResource("13_fi1xf")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -1.11758, 0.45559, 11.587)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Standing lamp"]
+transform = Transform3D(3.33333, 0, -9.09495e-13, 0, 3.33333, 0, 9.09495e-13, 0, 3.33333, 0, 8.48928, 0)
+omni_range = 15.0
+omni_attenuation = 0.75

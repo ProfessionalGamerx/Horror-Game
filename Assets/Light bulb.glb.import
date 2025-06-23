@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bjxulgvnpy7ud"
-path="res://.godot/imported/Bed Single.glb-74b8504d1523cf20e68818b1e1849050.scn"
+uid="uid://ca3j0em43bhyh"
+path="res://.godot/imported/Light bulb.glb-8f97a5f8c6e3b5eb6e8f3fcfe77eb69d.scn"
 
 [deps]
 
-source_file="res://Assets/Bed Single.glb"
-dest_files=["res://.godot/imported/Bed Single.glb-74b8504d1523cf20e68818b1e1849050.scn"]
+source_file="res://Assets/Light bulb.glb"
+dest_files=["res://.godot/imported/Light bulb.glb-8f97a5f8c6e3b5eb6e8f3fcfe77eb69d.scn"]
 
 [params]
 
@@ -31,18 +31,6 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:bedSingle": {
-"generate/physics": true
-},
-"PATH:bedSingle_1": {
-"generate/physics": true
-},
-"PATH:cover": {
-"generate/physics": true
-}
-}
-}
+_subresources={}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

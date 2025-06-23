@@ -279,7 +279,8 @@ _subresources={
 "generate/physics": true
 },
 "PATH:group1714428766": {
-"generate/physics": true
+"generate/physics": true,
+"import/skip_import": true
 },
 "PATH:group171653077": {
 "generate/physics": true
