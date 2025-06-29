@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://dydv4widw5b0g"]
+[gd_scene load_steps=50 format=3 uid="uid://dydv4widw5b0g"]
 
 [ext_resource type="PackedScene" uid="uid://c13tdea0800l1" path="res://Assets/House interior.glb" id="2_hdfhb"]
 [ext_resource type="Script" path="res://Scripts/hinge.gd" id="3_it138"]
@@ -13,6 +13,10 @@
 [ext_resource type="PackedScene" uid="uid://cef0dqtg0fht8" path="res://Assets/Light Ceiling.glb" id="11_5w3jn"]
 [ext_resource type="PackedScene" uid="uid://ca3j0em43bhyh" path="res://Assets/Light bulb.glb" id="12_rcsda"]
 [ext_resource type="PackedScene" uid="uid://6qwgo2av1gb1" path="res://Assets/Standing lamp.glb" id="13_fi1xf"]
+[ext_resource type="PackedScene" uid="uid://yi15300i4s82" path="res://Assets/city/scene.gltf" id="14_nolwp"]
+[ext_resource type="PackedScene" uid="uid://bfym8hje8nf8q" path="res://Assets/Window.glb" id="15_plvc6"]
+[ext_resource type="PackedScene" uid="uid://bouhhge7xnfs1" path="res://Assets/WoodenWindow.glb" id="16_bccov"]
+[ext_resource type="PackedScene" uid="uid://f3wrbtwqbwld" path="res://Assets/Window blinds.glb" id="16_is7fp"]
 
 [sub_resource type="Environment" id="Environment_8fws0"]
 background_mode = 1
@@ -409,6 +413,10 @@ albedo_color = Color(0.92549, 0.745098, 0.388235, 1)
 [node name="PlayerHouse" type="Node3D"]
 transform = Transform3D(-1, 0, -2.53518e-06, 0, 1, 0, 2.53518e-06, 0, -1, 0, 0, 0)
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_8fws0")
 
@@ -482,7 +490,7 @@ size = Vector3(5.81702, 1, 2.10596)
 material = SubResource("StandardMaterial3D_3msun")
 
 [node name="Player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.57941, 1.84405, 0.426132)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.57941, 1.13917, 0.426132)
 script = ExtResource("10_xg3y1")
 
 [node name="CameraPivot" type="Node3D" parent="Player"]
@@ -515,10 +523,16 @@ libraries = {
 "": SubResource("AnimationLibrary_vckt2")
 }
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.40802, 5.70875, 1.77558)
+[node name="Roof" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99777, 5.70875, 1.84506)
 use_collision = true
-size = Vector3(19.3529, 1, 22.0416)
+size = Vector3(14.5324, 1, 21.9026)
+material = SubResource("StandardMaterial3D_jnpqq")
+
+[node name="Roof2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3238, 5.70875, -2.19097)
+use_collision = true
+size = Vector3(4.1235, 1, 13.8942)
 material = SubResource("StandardMaterial3D_jnpqq")
 
 [node name="LivingRoomLights" parent="." instance=ExtResource("11_5w3jn")]
@@ -617,3 +631,45 @@ transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -1.11758, 0.45559, 11.5
 transform = Transform3D(3.33333, 0, -9.09495e-13, 0, 3.33333, 0, 9.09495e-13, 0, 3.33333, 0, 8.48928, 0)
 omni_range = 15.0
 omni_attenuation = 0.75
+
+[node name="CitySetting" parent="." instance=ExtResource("14_nolwp")]
+transform = Transform3D(0.015, 0, 0, 0, 0.015, 0, 0, 0, 0.015, -52.1295, -8.4543, 9.05111)
+
+[node name="Window" parent="." instance=ExtResource("15_plvc6")]
+transform = Transform3D(-4, 0, 1.52111e-05, 0, 4.7, 0, -1.01407e-05, 0, -6, -13.3462, 3.01821, -5.09704)
+
+[node name="Window2" parent="." instance=ExtResource("15_plvc6")]
+transform = Transform3D(-3.404, 0, 1.06478e-05, 0, 4, 0, -8.62976e-06, 0, -4.2, -13.5871, 3.15076, 2.85323)
+
+[node name="Window3" parent="." instance=ExtResource("15_plvc6")]
+transform = Transform3D(-3.404, 0, 1.06478e-05, 0, 4, 0, -8.62976e-06, 0, -4.2, -13.5871, 3.15076, 0.452244)
+
+[node name="WoodenWindow" parent="." instance=ExtResource("16_bccov")]
+transform = Transform3D(-5.24537e-09, 0, 0.1, 0, 0.128, 0, -0.12, 0, -4.37115e-09, -9.24086, 1.45387, 9.06794)
+
+[node name="Window blinds" parent="." instance=ExtResource("16_is7fp")]
+transform = Transform3D(-3.0598e-08, 0, -0.7, 0, 0.6, 0, 0.7, 0, -3.0598e-08, -8.84705, 3.20826, 8.11747)
+
+[node name="Window blinds2" parent="." instance=ExtResource("16_is7fp")]
+transform = Transform3D(-3.0598e-08, 0, -0.7, 0, 0.6, 0, 0.7, 0, -3.0598e-08, -8.84706, 3.20826, 9.89111)
+
+[node name="WoodenWindow2" parent="." instance=ExtResource("16_bccov")]
+transform = Transform3D(-4.80824e-09, 0, 0.1, 0, 0.128, 0, -0.11, 0, -4.37115e-09, 4.93526, 1.41809, 8.44168)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="InteractionPrompt" type="Label" parent="UI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -27.5
+offset_top = -148.0
+offset_right = 27.5
+offset_bottom = -125.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press E"
+horizontal_alignment = 1
+vertical_alignment = 2

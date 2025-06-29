@@ -2,6 +2,10 @@ extends CharacterBody3D
 
 @onready var ray: RayCast3D = $CameraPivot/Camera3D/InteractRay
 @onready var hand = $CameraPivot/Camera3D/Hand
+@onready var interaction_prompt := get_tree().get_current_scene().get_node("UI/InteractionPrompt")
+
+
+var prompt_visible = false
 
 var held_object: Node3D = null
 
@@ -62,6 +66,23 @@ func _physics_process(delta):
 
 
 func _process(delta):
+	var show_prompt = false
+
+	if held_object:
+		show_prompt = false  # Holding something, don't prompt
+	elif ray.is_colliding():
+		var hit = ray.get_collider()
+		var node = hit
+		while node:
+			if node.has_method("interact"):
+				show_prompt = true
+				break
+			node = node.get_parent()
+
+	# Toggle the visibility of the prompt
+	interaction_prompt.visible = show_prompt
+
+	# Handle interaction
 	if Input.is_action_just_pressed("interact"):
 		if held_object:
 			if held_object.has_method("pickup"):
@@ -70,17 +91,13 @@ func _process(delta):
 			return
 		elif ray.is_colliding():
 			var hit = ray.get_collider()
-			print("Ray hit:", hit)
 			var node = hit
 			while node:
 				if node.has_method("pickup"):
-					print("Found pickup method on:", node.name)
-					node.pickup($CameraPivot/Camera3D/Hand)
+					node.pickup(hand)
 					held_object = node
 					return
 				if node.has_method("interact"):
-					print("Found interact method on:", node.name)
 					node.interact()
 					return
 				node = node.get_parent()
-			print("No interact method found on hit or any parent.")
