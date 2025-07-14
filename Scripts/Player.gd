@@ -74,7 +74,7 @@ func _process(delta):
 		var hit = ray.get_collider()
 		var node = hit
 		while node:
-			if node.has_method("interact"):
+			if node.has_method("interact") or node.has_method("pickup"):
 				show_prompt = true
 				break
 			node = node.get_parent()

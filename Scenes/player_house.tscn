@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://dydv4widw5b0g"]
+[gd_scene load_steps=56 format=3 uid="uid://dydv4widw5b0g"]
 
 [ext_resource type="PackedScene" uid="uid://c13tdea0800l1" path="res://Assets/House interior.glb" id="2_hdfhb"]
 [ext_resource type="Script" path="res://Scripts/hinge.gd" id="3_it138"]
@@ -14,9 +14,15 @@
 [ext_resource type="PackedScene" uid="uid://ca3j0em43bhyh" path="res://Assets/Light bulb.glb" id="12_rcsda"]
 [ext_resource type="PackedScene" uid="uid://6qwgo2av1gb1" path="res://Assets/Standing lamp.glb" id="13_fi1xf"]
 [ext_resource type="PackedScene" uid="uid://yi15300i4s82" path="res://Assets/city/scene.gltf" id="14_nolwp"]
+[ext_resource type="Script" path="res://Assets/standing_lamp.gd" id="14_p1t27"]
 [ext_resource type="PackedScene" uid="uid://bfym8hje8nf8q" path="res://Assets/Window.glb" id="15_plvc6"]
 [ext_resource type="PackedScene" uid="uid://bouhhge7xnfs1" path="res://Assets/WoodenWindow.glb" id="16_bccov"]
 [ext_resource type="PackedScene" uid="uid://f3wrbtwqbwld" path="res://Assets/Window blinds.glb" id="16_is7fp"]
+[ext_resource type="Script" path="res://Scripts/light_switch.gd" id="18_jiuvu"]
+[ext_resource type="PackedScene" uid="uid://bdhu78un1aan6" path="res://Assets/Light Switch.glb" id="18_ovdgd"]
+[ext_resource type="Script" path="res://Scripts/light_switch_tv_room.gd" id="19_5inb5"]
+[ext_resource type="Script" path="res://Scripts/light_switch_kitchen.gd" id="20_llabc"]
+[ext_resource type="Script" path="res://Scripts/light_switch_bedroom.gd" id="21_6nsd1"]
 
 [sub_resource type="Environment" id="Environment_8fws0"]
 background_mode = 1
@@ -24,12 +30,20 @@ background_color = Color(0.118581, 0.118581, 0.118581, 1)
 ambient_light_color = Color(0.393086, 0.393086, 0.393085, 1)
 ambient_light_energy = 0.01
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3msun"]
+albedo_color = Color(0.941176, 0.760784, 0.392157, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_jsla8"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7uary"]
+points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607, 0.498884, 0.169713, 0.559144, 0.464172, 0.231051, -0.803591, 0.320455, 0.40741, 0.651043, -0.243523, -0.482789, 0.594843, 0.0822132, -0.362868, -0.682312, 0.289697, 0.469044, -0.654529, -0.0662713, -0.127444, 0.842701, -0.338103, -0.393435, -0.683942, -0.244717, 0.438255, 0.623309, 0.200849, 0.0841477, 0.977454, 0.114795, -0.0682023, -0.976458, -0.12927, 0.20055, -0.563129, -0.451454, -0.185527, 0.595453, -0.453475, -0.273363, 0.592268, 0.407754, -0.00693649, -0.476823, 0.49966, 0.375821, -0.588614, 0.316955, 0.111579, 0.563059, -0.481177, -0.41725, 0.527866, -0.270497, -0.484546, -0.596972, -0.0665097, -0.279747, 0.908561, 0.0533361, -0.250197, -0.880712, 0.205319, 0.263647, -0.902771, -0.127394, 0.293368, 0.871526, -0.157196, 0.373412, -0.526319, -0.328246, 0.499663, 0.476641, -0.00688856, 0.0531056, 0.875001, 0.324703, -0.154543, -0.590854, 0.465879, -0.0972799, -0.782358, -0.398188, -0.387649, -0.498171, 0.31565, -0.30068, -0.587995, -0.388901)
+
 [sub_resource type="Animation" id="Animation_36b2k"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge4:rotation")
+tracks/0/path = NodePath("HouseInterior/Hinge4:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -45,7 +59,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/path = NodePath("HouseInterior/Hinge:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -61,7 +75,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge4:rotation")
+tracks/0/path = NodePath("HouseInterior/Hinge4:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -77,7 +91,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/path = NodePath("HouseInterior/Hinge:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -93,7 +107,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge4:rotation")
+tracks/0/path = NodePath("HouseInterior/Hinge4:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -118,7 +132,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/path = NodePath("HouseInterior/Hinge:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -134,7 +148,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge2:rotation")
+tracks/0/path = NodePath("HouseInterior/Hinge2:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -149,7 +163,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/path = NodePath("HouseInterior/Hinge:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -165,7 +179,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge2:rotation")
+tracks/0/path = NodePath("HouseInterior/Hinge2:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -296,7 +310,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge4:rotation")
+tracks/0/path = NodePath("HouseInterior/Hinge4:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -312,7 +326,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge4:rotation")
+tracks/0/path = NodePath("HouseInterior/Hinge4:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -328,7 +342,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge4:rotation")
+tracks/0/path = NodePath("HouseInterior/Hinge4:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -344,14 +358,6 @@ _data = {
 "door_close4": SubResource("Animation_cskey"),
 "door_open4": SubResource("Animation_2jqrt")
 }
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3msun"]
-albedo_color = Color(0.941176, 0.760784, 0.392157, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_jsla8"]
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7uary"]
-points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607, 0.498884, 0.169713, 0.559144, 0.464172, 0.231051, -0.803591, 0.320455, 0.40741, 0.651043, -0.243523, -0.482789, 0.594843, 0.0822132, -0.362868, -0.682312, 0.289697, 0.469044, -0.654529, -0.0662713, -0.127444, 0.842701, -0.338103, -0.393435, -0.683942, -0.244717, 0.438255, 0.623309, 0.200849, 0.0841477, 0.977454, 0.114795, -0.0682023, -0.976458, -0.12927, 0.20055, -0.563129, -0.451454, -0.185527, 0.595453, -0.453475, -0.273363, 0.592268, 0.407754, -0.00693649, -0.476823, 0.49966, 0.375821, -0.588614, 0.316955, 0.111579, 0.563059, -0.481177, -0.41725, 0.527866, -0.270497, -0.484546, -0.596972, -0.0665097, -0.279747, 0.908561, 0.0533361, -0.250197, -0.880712, 0.205319, 0.263647, -0.902771, -0.127394, 0.293368, 0.871526, -0.157196, 0.373412, -0.526319, -0.328246, 0.499663, 0.476641, -0.00688856, 0.0531056, 0.875001, 0.324703, -0.154543, -0.590854, 0.465879, -0.0972799, -0.782358, -0.398188, -0.387649, -0.498171, 0.31565, -0.30068, -0.587995, -0.388901)
 
 [sub_resource type="Animation" id="Animation_18w02"]
 length = 0.001
@@ -420,65 +426,6 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_8fws0")
 
-[node name="TVRoomLight" type="OmniLight3D" parent="."]
-transform = Transform3D(-1, 0, 2.53518e-06, 0, 1, 0, -2.53518e-06, 0, -1, -5.31393, 4.84108, 8.99981)
-omni_range = 10.0
-
-[node name="HouseInterior" parent="." instance=ExtResource("2_hdfhb")]
-transform = Transform3D(-5, 0, -7.54979e-07, 0, 5, 0, 7.54979e-07, 0, -5, -1.88903, 2.51059, 1.37008)
-
-[node name="Hinge" type="Node3D" parent="."]
-transform = Transform3D(-5.42999e-06, 0, -1.7, 0, 2.12, 0, 1.5, 0, -6.15398e-06, -2.28368, 2.73161, 5.61587)
-script = ExtResource("3_it138")
-
-[node name="House Door" parent="Hinge" instance=ExtResource("4_av24s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0244727, 0, 0.628617)
-
-[node name="DoorAnimations" type="AnimationPlayer" parent="Hinge"]
-root_node = NodePath("../..")
-libraries = {
-"": SubResource("AnimationLibrary_bsjg7"),
-"door_animations": SubResource("AnimationLibrary_2t20k")
-}
-autoplay = "door_close"
-
-[node name="Hinge2" type="Node3D" parent="."]
-transform = Transform3D(-5.42999e-06, 0, -1.7, 0, 2.12, 0, 1.5, 0, -6.15398e-06, -1.96733, 2.67572, -1.1137)
-script = ExtResource("5_6hynl")
-
-[node name="House Door" parent="Hinge2" instance=ExtResource("4_av24s")]
-transform = Transform3D(1, 0, -2.27374e-13, 0, 1, 0, 0, 0, 1, 0.0244727, 0, 0.628617)
-
-[node name="DoorAnimations2" type="AnimationPlayer" parent="Hinge2"]
-libraries = {
-"": SubResource("AnimationLibrary_37wah")
-}
-
-[node name="Hinge3" type="Node3D" parent="."]
-transform = Transform3D(-1.5, 0, -4.30981e-06, 0, 2.12, 0, 3.80277e-06, 0, -1.7, 0.0919574, 2.67011, 2.35429)
-script = ExtResource("6_cdyx4")
-
-[node name="House Door" parent="Hinge3" instance=ExtResource("4_av24s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0244727, 0, 0.628617)
-
-[node name="DoorAnimations3" type="AnimationPlayer" parent="Hinge3"]
-libraries = {
-"": SubResource("AnimationLibrary_pa28j")
-}
-
-[node name="Hinge4" type="Node3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 2.12, 0, 0, 0, 1.7, -1.60288, 2.72032, 4.5967)
-script = ExtResource("7_exdfa")
-
-[node name="House Door" parent="Hinge4" instance=ExtResource("4_av24s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0244727, 0, 0.628617)
-
-[node name="DoorAnimations4" type="AnimationPlayer" parent="Hinge4"]
-root_node = NodePath("../..")
-libraries = {
-"": SubResource("AnimationLibrary_fybgf")
-}
-
 [node name="Bed" parent="." instance=ExtResource("8_hiwax")]
 transform = Transform3D(4.5, 0, 0, 0, 4.501, 0, 0, 0, 5, 6.32517, 0.384136, 6.61158)
 
@@ -514,147 +461,238 @@ mesh = SubResource("CapsuleMesh_jsla8")
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0.965973, 0)
 shape = SubResource("ConvexPolygonShape3D_7uary")
 
-[node name="Front Door" parent="." instance=ExtResource("10_u2vgs")]
-transform = Transform3D(4.70588, 0, 0, 0, 5.42453, 0, 0, 0, 3.33333, 0.378897, -0.814495, -9.03547)
+[node name="HouseInterior" parent="." instance=ExtResource("2_hdfhb")]
+transform = Transform3D(-5, 0, -7.54979e-07, 0, 5, 0, 7.54979e-07, 0, -5, -1.88903, 2.51059, 1.37008)
+
+[node name="Hinge" type="Node3D" parent="HouseInterior"]
+transform = Transform3D(0.3, 0, 0, 0, 0.424, 0, 0, 0, 0.34, -0.408779, 0.044204, -0.190996)
+script = ExtResource("3_it138")
+
+[node name="House Door" parent="HouseInterior/Hinge" instance=ExtResource("4_av24s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0244727, 0, 0.628617)
+
+[node name="DoorAnimations" type="AnimationPlayer" parent="HouseInterior/Hinge"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_bsjg7"),
+"door_animations": SubResource("AnimationLibrary_2t20k")
+}
+autoplay = "door_close"
+
+[node name="Hinge2" type="Node3D" parent="HouseInterior"]
+transform = Transform3D(-1.086e-06, 0, -0.34, 0, 0.424, 0, 0.3, 0, -1.2308e-06, -0.0537264, 0.033026, -0.64155)
+script = ExtResource("5_6hynl")
+
+[node name="House Door" parent="HouseInterior/Hinge2" instance=ExtResource("4_av24s")]
+transform = Transform3D(1, 0, -2.27374e-13, 0, 1, 0, 0, 0, 1, 0.0244727, 0, 0.628617)
+
+[node name="DoorAnimations2" type="AnimationPlayer" parent="HouseInterior/Hinge2"]
+libraries = {
+"": SubResource("AnimationLibrary_37wah")
+}
+
+[node name="Hinge3" type="Node3D" parent="HouseInterior"]
+transform = Transform3D(-0.3, 0, -8.61962e-07, 0, 0.424, 0, 7.60555e-07, 0, -0.34, 0.00915682, 0.031904, 0.477366)
+script = ExtResource("6_cdyx4")
+
+[node name="House Door" parent="HouseInterior/Hinge3" instance=ExtResource("4_av24s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0244727, 0, 0.628617)
+
+[node name="DoorAnimations3" type="AnimationPlayer" parent="HouseInterior/Hinge3"]
+libraries = {
+"": SubResource("AnimationLibrary_pa28j")
+}
+
+[node name="Hinge4" type="Node3D" parent="HouseInterior"]
+transform = Transform3D(0.3, 0, 0, 0, 0.424, 0, 0, 0, 0.34, 0.0810517, 0.0419459, -0.852974)
+script = ExtResource("7_exdfa")
+
+[node name="House Door" parent="HouseInterior/Hinge4" instance=ExtResource("4_av24s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0244727, 0, 0.628617)
+
+[node name="DoorAnimations4" type="AnimationPlayer" parent="HouseInterior/Hinge4"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_fybgf")
+}
+
+[node name="Front Door" parent="HouseInterior" instance=ExtResource("10_u2vgs")]
+transform = Transform3D(0.941176, 0, 0, 0, 1.08491, 0, 0, 0, 0.666666, -0.0066101, -0.649822, 2.02056)
 script = ExtResource("10_frqmi")
 
-[node name="DoorAnimations" type="AnimationPlayer" parent="Front Door"]
+[node name="DoorAnimations" type="AnimationPlayer" parent="HouseInterior/Front Door"]
 libraries = {
 "": SubResource("AnimationLibrary_vckt2")
 }
 
-[node name="Roof" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99777, 5.70875, 1.84506)
+[node name="Roof" type="CSGBox3D" parent="HouseInterior"]
+transform = Transform3D(-0.2, 0, 3.01992e-08, 0, 0.2, 0, -3.01992e-08, 0, -0.2, 0.021748, 0.639632, -0.094996)
 use_collision = true
 size = Vector3(14.5324, 1, 21.9026)
 material = SubResource("StandardMaterial3D_jnpqq")
 
-[node name="Roof2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3238, 5.70875, -2.19097)
+[node name="Roof2" type="CSGBox3D" parent="HouseInterior"]
+transform = Transform3D(-0.2, 0, 3.01992e-08, 0, 0.2, 0, -3.01992e-08, 0, -0.2, 1.88695, 0.639632, 0.71221)
 use_collision = true
 size = Vector3(4.1235, 1, 13.8942)
 material = SubResource("StandardMaterial3D_jnpqq")
 
-[node name="LivingRoomLights" parent="." instance=ExtResource("11_5w3jn")]
-transform = Transform3D(-1.1, 0, 2.7887e-06, 0, 1.1, 0, -2.7887e-06, 0, -1.1, -6.56673, 5.21232, 1.98981)
+[node name="TVRoomLight" type="OmniLight3D" parent="HouseInterior"]
+transform = Transform3D(0.2, 0, -5.37235e-07, 0, 0.2, 0, 5.37235e-07, 0, 0.2, 0.68498, 0.466098, -1.52595)
+omni_range = 10.0
 
-[node name="LivingRoomLight" type="OmniLight3D" parent="LivingRoomLights"]
+[node name="LivingRoomLights" parent="HouseInterior" instance=ExtResource("11_5w3jn")]
+transform = Transform3D(0.22, 0, -5.90959e-07, 0, 0.22, 0, 5.90959e-07, 0, 0.22, 0.93554, 0.540346, -0.123946)
+
+[node name="LightGroup" type="Node3D" parent="HouseInterior/LivingRoomLights"]
+
+[node name="LivingRoomLight" type="OmniLight3D" parent="HouseInterior/LivingRoomLights/LightGroup"]
+transform = Transform3D(0.909091, 0, 1.0842e-19, 0, 0.909091, 0, -1.0842e-19, 0, 0.909091, 0, -1.30133, 0.281318)
+light_energy = 0.25
+light_indirect_energy = 0.25
+omni_range = 10.0
+
+[node name="LivingRoomLight2" type="OmniLight3D" parent="HouseInterior/LivingRoomLights/LightGroup"]
+transform = Transform3D(0.909091, 0, 1.0842e-19, 0, 0.909091, 0, -1.0842e-19, 0, 0.909091, 0.000256062, -0.945254, -0.285369)
+light_energy = 0.25
+light_indirect_energy = 0.25
+omni_range = 10.0
+
+[node name="LivingRoomLight3" type="OmniLight3D" parent="HouseInterior/LivingRoomLights/LightGroup"]
+transform = Transform3D(0.909091, 0, 1.0842e-19, 0, 0.909091, 0, -1.0842e-19, 0, 0.909091, -0.274827, -1.14796, -0.00146103)
+light_energy = 0.25
+light_indirect_energy = 0.25
+omni_range = 10.0
+
+[node name="LivingRoomLight4" type="OmniLight3D" parent="HouseInterior/LivingRoomLights/LightGroup"]
+transform = Transform3D(0.909091, 0, 1.0842e-19, 0, 0.909091, 0, -1.0842e-19, 0, 0.909091, 0.283109, -0.732068, -0.00146103)
+light_energy = 0.25
+light_indirect_energy = 0.25
+omni_range = 10.0
+
+[node name="LivingRoomLights2" parent="HouseInterior" instance=ExtResource("11_5w3jn")]
+transform = Transform3D(0.22, 0, -5.90959e-07, 0, 0.22, 0, 5.90959e-07, 0, 0.22, 1.85533, 0.540346, -0.0507437)
+
+[node name="LightGroup" type="Node3D" parent="HouseInterior/LivingRoomLights2"]
+transform = Transform3D(1, 0, 1.0842e-19, 0, 1, 0, -1.0842e-19, 0, 1, 0, 0, 0)
+
+[node name="LivingRoomLight" type="OmniLight3D" parent="HouseInterior/LivingRoomLights2/LightGroup"]
 transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0, -1.30133, 0.281318)
 light_energy = 0.25
 light_indirect_energy = 0.25
 omni_range = 10.0
 
-[node name="LivingRoomLight2" type="OmniLight3D" parent="LivingRoomLights"]
+[node name="LivingRoomLight2" type="OmniLight3D" parent="HouseInterior/LivingRoomLights2/LightGroup"]
 transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0.000255585, -0.945254, -0.285369)
 light_energy = 0.25
 light_indirect_energy = 0.25
 omni_range = 10.0
 
-[node name="LivingRoomLight3" type="OmniLight3D" parent="LivingRoomLights"]
-transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, -0.274827, -1.14796, -0.00146103)
+[node name="LivingRoomLight3" type="OmniLight3D" parent="HouseInterior/LivingRoomLights2/LightGroup"]
+transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, -0.274828, -1.14796, -0.00146103)
 light_energy = 0.25
 light_indirect_energy = 0.25
 omni_range = 10.0
 
-[node name="LivingRoomLight4" type="OmniLight3D" parent="LivingRoomLights"]
+[node name="LivingRoomLight4" type="OmniLight3D" parent="HouseInterior/LivingRoomLights2/LightGroup"]
 transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0.283109, -0.732068, -0.00146103)
 light_energy = 0.25
 light_indirect_energy = 0.25
 omni_range = 10.0
 
-[node name="LivingRoomLights2" parent="." instance=ExtResource("11_5w3jn")]
-transform = Transform3D(-1.1, 0, 2.7887e-06, 0, 1.1, 0, -2.7887e-06, 0, -1.1, -7.6128, 5.21232, -5.57771)
+[node name="LivingRoomLights3" parent="HouseInterior" instance=ExtResource("11_5w3jn")]
+transform = Transform3D(0.22, 0, -5.90959e-07, 0, 0.22, 0, 5.90959e-07, 0, 0.22, 1.14475, 0.540346, 1.38956)
 
-[node name="LivingRoomLight" type="OmniLight3D" parent="LivingRoomLights2"]
-transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0, -1.30133, 0.281318)
+[node name="LightGroup" type="Node3D" parent="HouseInterior/LivingRoomLights3"]
+
+[node name="LivingRoomLight" type="OmniLight3D" parent="HouseInterior/LivingRoomLights3/LightGroup"]
+transform = Transform3D(0.909091, 0, 1.0842e-19, 0, 0.909091, 0, -1.0842e-19, 0, 0.909091, 0, -1.30133, 0.281318)
 light_energy = 0.25
 light_indirect_energy = 0.25
 omni_range = 10.0
 
-[node name="LivingRoomLight2" type="OmniLight3D" parent="LivingRoomLights2"]
-transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0.000255585, -0.945254, -0.285369)
+[node name="LivingRoomLight2" type="OmniLight3D" parent="HouseInterior/LivingRoomLights3/LightGroup"]
+transform = Transform3D(0.909091, 0, 1.0842e-19, 0, 0.909091, 0, -1.0842e-19, 0, 0.909091, 0.000255585, -0.945254, -0.285369)
 light_energy = 0.25
 light_indirect_energy = 0.25
 omni_range = 10.0
 
-[node name="LivingRoomLight3" type="OmniLight3D" parent="LivingRoomLights2"]
-transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, -0.274827, -1.14796, -0.00146103)
+[node name="LivingRoomLight3" type="OmniLight3D" parent="HouseInterior/LivingRoomLights3/LightGroup"]
+transform = Transform3D(0.909091, 0, 1.0842e-19, 0, 0.909091, 0, -1.0842e-19, 0, 0.909091, -0.274827, -1.14796, -0.00146055)
 light_energy = 0.25
 light_indirect_energy = 0.25
 omni_range = 10.0
 
-[node name="LivingRoomLight4" type="OmniLight3D" parent="LivingRoomLights2"]
-transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0.283109, -0.732068, -0.00146103)
+[node name="LivingRoomLight4" type="OmniLight3D" parent="HouseInterior/LivingRoomLights3/LightGroup"]
+transform = Transform3D(0.909091, 0, 1.0842e-19, 0, 0.909091, 0, -1.0842e-19, 0, 0.909091, 0.283109, -0.732068, -0.00146055)
 light_energy = 0.25
 light_indirect_energy = 0.25
 omni_range = 10.0
 
-[node name="LivingRoomLights3" parent="." instance=ExtResource("11_5w3jn")]
-transform = Transform3D(-1.1, 0, 2.7887e-06, 0, 1.1, 0, -2.7887e-06, 0, -1.1, -11.1657, 5.21232, 1.6238)
+[node name="Kitchen Light" parent="HouseInterior" instance=ExtResource("12_rcsda")]
+transform = Transform3D(0.04, -3.49692e-09, 6.03984e-09, -3.49692e-09, -0.04, 0, 6.03984e-09, -5.28021e-16, -0.04, -0.445241, 0.519305, 1.12443)
 
-[node name="LivingRoomLight" type="OmniLight3D" parent="LivingRoomLights3"]
-transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0, -1.30133, 0.281318)
-light_energy = 0.25
-light_indirect_energy = 0.25
-omni_range = 10.0
-
-[node name="LivingRoomLight2" type="OmniLight3D" parent="LivingRoomLights3"]
-transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0.000255585, -0.945254, -0.285369)
-light_energy = 0.25
-light_indirect_energy = 0.25
-omni_range = 10.0
-
-[node name="LivingRoomLight3" type="OmniLight3D" parent="LivingRoomLights3"]
-transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, -0.274827, -1.14796, -0.00146103)
-light_energy = 0.25
-light_indirect_energy = 0.25
-omni_range = 10.0
-
-[node name="LivingRoomLight4" type="OmniLight3D" parent="LivingRoomLights3"]
-transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0.283109, -0.732068, -0.00146103)
-light_energy = 0.25
-light_indirect_energy = 0.25
-omni_range = 10.0
-
-[node name="Light bulb" parent="." instance=ExtResource("12_rcsda")]
-transform = Transform3D(-0.2, 1.74846e-08, 0, -1.74846e-08, -0.2, 0, 0, 0, 0.2, 0.337174, 5.07341, -4.25205)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Light bulb"]
+[node name="OmniLight3D" type="OmniLight3D" parent="HouseInterior/Kitchen Light"]
 transform = Transform3D(5, -2.84245e-14, -9.09495e-13, 2.84189e-14, 5, 0, 9.09495e-13, 0, 5, 0, 1.33245, 0)
 omni_range = 10.0
 omni_attenuation = 0.5
 
-[node name="Standing lamp" parent="." instance=ExtResource("13_fi1xf")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -1.11758, 0.45559, 11.587)
+[node name="Bedroom Light" parent="HouseInterior" instance=ExtResource("12_rcsda")]
+transform = Transform3D(0.04, -3.49692e-09, 6.03984e-09, -3.49692e-09, -0.04, 0, 6.03984e-09, -5.28021e-16, -0.04, -0.689883, 0.519305, -1.42498)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Standing lamp"]
-transform = Transform3D(3.33333, 0, -9.09495e-13, 0, 3.33333, 0, 9.09495e-13, 0, 3.33333, 0, 8.48928, 0)
+[node name="OmniLight3D" type="OmniLight3D" parent="HouseInterior/Bedroom Light"]
+transform = Transform3D(5, -2.84245e-14, -9.09495e-13, 2.84189e-14, 5, 0, 9.09495e-13, 0, 5, 0, 1.33245, 0)
+omni_range = 10.0
+omni_attenuation = 0.5
+
+[node name="Standing lamp" parent="HouseInterior" instance=ExtResource("13_fi1xf")]
+transform = Transform3D(-0.06, 0, 9.05976e-09, 0, 0.06, 0, -9.05976e-09, 0, -0.06, -0.15429, -0.411, -2.04338)
+script = ExtResource("14_p1t27")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="HouseInterior/Standing lamp"]
+transform = Transform3D(3.33333, 0, -9.09495e-13, 0, 3.33333, 0, 9.09495e-13, 0, 3.33333, 0.65099, 8.48928, -0.581657)
 omni_range = 15.0
 omni_attenuation = 0.75
 
+[node name="Window" parent="HouseInterior" instance=ExtResource("15_plvc6")]
+transform = Transform3D(0.8, 0, -3.22342e-06, 0, 0.94, 0, 2.14894e-06, 0, 1.2, 2.29143, 0.101524, 1.29342)
+
+[node name="Window2" parent="HouseInterior" instance=ExtResource("15_plvc6")]
+transform = Transform3D(0.6808, 0, -2.2564e-06, 0, 0.8, 0, 1.82875e-06, 0, 0.84, 2.33961, 0.128034, -0.29663)
+
+[node name="Window3" parent="HouseInterior" instance=ExtResource("15_plvc6")]
+transform = Transform3D(0.6808, 0, -2.2564e-06, 0, 0.8, 0, 1.82875e-06, 0, 0.84, 2.33961, 0.128034, 0.183568)
+
+[node name="WoodenWindow" parent="HouseInterior" instance=ExtResource("16_bccov")]
+transform = Transform3D(-2.57483e-09, 0, -0.02, 0, 0.0256, 0, 0.024, 0, -2.14569e-09, 1.47037, -0.211344, -1.53957)
+
+[node name="Window blinds" parent="HouseInterior" instance=ExtResource("16_is7fp")]
+transform = Transform3D(2.7259e-08, 0, 0.14, 0, 0.12, 0, -0.14, 0, 2.7259e-08, 1.3916, 0.139534, -1.34948)
+
+[node name="Window blinds2" parent="HouseInterior" instance=ExtResource("16_is7fp")]
+transform = Transform3D(2.7259e-08, 0, 0.14, 0, 0.12, 0, -0.14, 0, 2.7259e-08, 1.39161, 0.139534, -1.70421)
+
+[node name="BedroomWindow" parent="HouseInterior" instance=ExtResource("16_bccov")]
+transform = Transform3D(-2.36026e-09, 0, -0.02, 0, 0.0256, 0, 0.022, 0, -2.14569e-09, -1.36486, -0.2185, -1.41432)
+
+[node name="Light Switch" parent="HouseInterior" instance=ExtResource("18_ovdgd")]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 1.26357, -0.048133, 0.524389)
+script = ExtResource("18_jiuvu")
+
+[node name="Light Switch TV Room" parent="HouseInterior" instance=ExtResource("18_ovdgd")]
+transform = Transform3D(5.84124e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, 5.84124e-08, 0.482, -0.0480001, -0.901522)
+script = ExtResource("19_5inb5")
+
+[node name="Light Switch Bedroom" parent="HouseInterior" instance=ExtResource("18_ovdgd")]
+transform = Transform3D(-1.31135e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31135e-08, -0.651492, -0.0480003, -2.17919)
+script = ExtResource("21_6nsd1")
+
+[node name="Light Switch Kitchen" parent="HouseInterior" instance=ExtResource("18_ovdgd")]
+transform = Transform3D(-0.3, 0, -2.62267e-08, 0, 0.3, 0, 2.62267e-08, 0, -0.3, -0.0226982, -0.048133, 0.65309)
+script = ExtResource("20_llabc")
+
 [node name="CitySetting" parent="." instance=ExtResource("14_nolwp")]
 transform = Transform3D(0.015, 0, 0, 0, 0.015, 0, 0, 0, 0.015, -52.1295, -8.4543, 9.05111)
-
-[node name="Window" parent="." instance=ExtResource("15_plvc6")]
-transform = Transform3D(-4, 0, 1.52111e-05, 0, 4.7, 0, -1.01407e-05, 0, -6, -13.3462, 3.01821, -5.09704)
-
-[node name="Window2" parent="." instance=ExtResource("15_plvc6")]
-transform = Transform3D(-3.404, 0, 1.06478e-05, 0, 4, 0, -8.62976e-06, 0, -4.2, -13.5871, 3.15076, 2.85323)
-
-[node name="Window3" parent="." instance=ExtResource("15_plvc6")]
-transform = Transform3D(-3.404, 0, 1.06478e-05, 0, 4, 0, -8.62976e-06, 0, -4.2, -13.5871, 3.15076, 0.452244)
-
-[node name="WoodenWindow" parent="." instance=ExtResource("16_bccov")]
-transform = Transform3D(-5.24537e-09, 0, 0.1, 0, 0.128, 0, -0.12, 0, -4.37115e-09, -9.24086, 1.45387, 9.06794)
-
-[node name="Window blinds" parent="." instance=ExtResource("16_is7fp")]
-transform = Transform3D(-3.0598e-08, 0, -0.7, 0, 0.6, 0, 0.7, 0, -3.0598e-08, -8.84705, 3.20826, 8.11747)
-
-[node name="Window blinds2" parent="." instance=ExtResource("16_is7fp")]
-transform = Transform3D(-3.0598e-08, 0, -0.7, 0, 0.6, 0, 0.7, 0, -3.0598e-08, -8.84706, 3.20826, 9.89111)
-
-[node name="WoodenWindow2" parent="." instance=ExtResource("16_bccov")]
-transform = Transform3D(-4.80824e-09, 0, 0.1, 0, 0.128, 0, -0.11, 0, -4.37115e-09, 4.93526, 1.41809, 8.44168)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
