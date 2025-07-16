@@ -1,12 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://dtxf8i5olxw1e"]
+[gd_scene load_steps=15 format=3 uid="uid://dtxf8i5olxw1e"]
 
-[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_0fbcq"]
+[ext_resource type="Script" path="res://Scripts/player/Player.gd" id="1_0fbcq"]
 [ext_resource type="PackedScene" uid="uid://yi15300i4s82" path="res://Assets/city/scene.gltf" id="2_gifl4"]
 [ext_resource type="PackedScene" uid="uid://7xr1np4ehqi" path="res://Assets/Box.glb" id="3_oy33s"]
-[ext_resource type="Script" path="res://Scripts/box.gd" id="4_2ufh1"]
+[ext_resource type="Script" path="res://Scripts/packages/box.gd" id="4_2ufh1"]
 [ext_resource type="PackedScene" uid="uid://cnv1vvq87yhim" path="res://Characters/Little Man.glb" id="5_mprjm"]
-[ext_resource type="Script" path="res://Characters/little_man.gd" id="6_t0yrs"]
-[ext_resource type="Resource" uid="uid://bqnt03x50pc0m" path="res://TestDialogue.dialogue" id="7_tytwp"]
+[ext_resource type="Script" path="res://Scripts/Characters/little_man.gd" id="6_wqdc7"]
+[ext_resource type="Resource" uid="uid://dhusbdyj0kalu" path="res://LittleManDialogue.dialogue" id="7_whxcd"]
+[ext_resource type="PackedScene" uid="uid://cosadxr62f5e5" path="res://Assets/PlayerCar.glb" id="8_5j5y8"]
+[ext_resource type="Script" path="res://Scripts/player/player_car.gd" id="9_ykqq5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j2v4v"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -72,6 +74,11 @@ size = Vector3(150, 0.08, 100)
 transform = Transform3D(4, 0, 0, 0, 3, 0, 0, 0, 4, -14.8542, 4.41054, -19.1365)
 script = ExtResource("4_2ufh1")
 
+[node name="Little Man" parent="." instance=ExtResource("5_mprjm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 5.92278, -13.1492)
+script = ExtResource("6_wqdc7")
+dialogue = ExtResource("7_whxcd")
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="InteractionPrompt" type="Label" parent="UI"]
@@ -90,7 +97,6 @@ text = "Press E"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Little Man" parent="." instance=ExtResource("5_mprjm")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 10.8172, -19.1914)
-script = ExtResource("6_t0yrs")
-dialogue = ExtResource("7_tytwp")
+[node name="PlayerCar" parent="." instance=ExtResource("8_5j5y8")]
+transform = Transform3D(0.000616702, 0, -0.0199905, 0, 0.02, 0, 0.0199905, 0, 0.000616702, -0.714322, 4.45834, -20.833)
+script = ExtResource("9_ykqq5")

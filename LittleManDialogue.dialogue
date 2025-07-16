@@ -1,0 +1,39 @@
+~ Branch1
+Larry: Help me
+- Yah
+	Larry: ty
+	=>< Help
+- Nah
+	Larry: aww shucks
+- What? => Branch1
+Larry: Bye
+=> END
+
+~ Branch2
+Larry: Greetings I am in need of assistance
+- Help
+	Larry: Thank you kind soul
+	=>< Help
+- Not my problem
+	Larry: Rude
+Larry: bye
+=> END
+
+~ Branch3
+Larry: My life is in shambles
+- Need any help?
+	=>< Help
+- Sucks to be you
+	Larry: That's mean
+Larry: Bye
+=> END
+
+~ Help
+Larry: My wife left me and took my pot of gold that's rightfully mine, could you retrieve it from her?
+- Bet
+	Larry: Thanks, here's her address:
+	*doxxes her*
+	Larry: I'll give you half the gold once you bring it back to me
+	Larry: Thank you and goodluck
+- Actually I don't want to help
+	Larry: Oh ok

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dhusbdyj0kalu"
+path="res://.godot/imported/LittleManDialogue.dialogue-ff10dd016361b5d7a0b29fb634be283a.tres"
+
+[deps]
+
+source_file="res://LittleManDialogue.dialogue"
+dest_files=["res://.godot/imported/LittleManDialogue.dialogue-ff10dd016361b5d7a0b29fb634be283a.tres"]
+
+[params]
+
+defaults=true
