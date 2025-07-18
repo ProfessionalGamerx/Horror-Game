@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dcjrpan1ny3gs"
+path.s3tc="res://.godot/imported/pot_of_gold_at_the_end_of_a_rainbow_1.png-e811bd4fcff1976bb62c79ea9252487a.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "307e126d623264840061ca5aebd8ffc2"
+}
+
+[deps]
+
+source_file="res://Assets/pot_of_gold_at_the_end_of_a_rainbow_1.png"
+dest_files=["res://.godot/imported/pot_of_gold_at_the_end_of_a_rainbow_1.png-e811bd4fcff1976bb62c79ea9252487a.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

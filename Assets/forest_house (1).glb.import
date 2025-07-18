@@ -1,0 +1,144 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://ce8pm58oamdv3"
+path="res://.godot/imported/forest_house (1).glb-23e2940584ce225ebc865baf11ecacd3.scn"
+
+[deps]
+
+source_file="res://Assets/forest_house (1).glb"
+dest_files=["res://.godot/imported/forest_house (1).glb-23e2940584ce225ebc865baf11ecacd3.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/BTree/BTree_BrichTree_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/BTree_001/BTree_001_BrichTree_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/BTree_002/BTree_002_BrichTree_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/Chimney/Chimney_RoofMoss_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/DoorRoof/DoorRoof_RoofMoss_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/FenceLeft/FenceLeft_WoodFence_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/FenceRight/FenceRight_WoodFence_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/FenceRight_003/FenceRight_003_WoodFence_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/FenceRight_015/FenceRight_015_WoodFence_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/Ground/Ground_Ground_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/GroundPlane/GroundPlane_Plane_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/House/House_House_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/HouseFence/HouseFence_WoodPlanks_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/HouseSupportBeams/HouseSupportBeams_WoodPlanks_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/HouseWoodFloor/HouseWoodFloor_WoodPlanks_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/Moss/Moss_WoodPlanks_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/Powerlines/Powerlines_WoodFence_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/Racoon": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/Redwood/Redwood_BrichTree_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/RedwoodAlpha/RedwoodAlpha_TreeLeafs_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/RedwoodChopped/RedwoodChopped_BrichTree_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/RedwoodMoss/RedwoodMoss_BrichTree_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/RoofBase_001/RoofBase_001_RoofMoss_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/RoofMoss/RoofMoss_RoofMoss_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/Roof_009/Roof_009_RoofMoss_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/SideRoofBase/SideRoofBase_RoofMoss_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/Stairs/Stairs_WoodPlanks_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/Stump/Stump_WoodFence_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/Stump_001/Stump_001_WoodFence_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/Stump_002/Stump_002_WoodFence_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/Stump_003/Stump_003_WoodFence_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/SupportBeams/SupportBeams_Window_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/Windows/Windows_Window_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/Windows_001/Windows_001_Window_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7e3ea3961971410d9438a7b059f62e2e_fbx/RootNode/Windows_002/Windows_002_Window_0": {
+"generate/physics": true
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

@@ -14,12 +14,12 @@
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
-[sub_resource type="Sky" id="Sky_5yqbx"]
+[sub_resource type="Sky" id="Sky_jyhdf"]
 sky_material = SubResource("ProceduralSkyMaterial_j2v4v")
 
 [sub_resource type="Environment" id="Environment_8jtyr"]
 background_mode = 2
-sky = SubResource("Sky_5yqbx")
+sky = SubResource("Sky_jyhdf")
 tonemap_mode = 2
 glow_enabled = true
 
@@ -74,7 +74,7 @@ size = Vector3(150, 0.08, 100)
 transform = Transform3D(4, 0, 0, 0, 3, 0, 0, 0, 4, -14.8542, 4.41054, -19.1365)
 script = ExtResource("4_2ufh1")
 
-[node name="Little Man" parent="." instance=ExtResource("5_mprjm")]
+[node name="LittleMan" parent="." instance=ExtResource("5_mprjm")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 5.92278, -13.1492)
 script = ExtResource("6_wqdc7")
 dialogue = ExtResource("7_whxcd")

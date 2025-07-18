@@ -23,9 +23,4 @@ func interact():
 
 func transition_to_neighborhood():
 	print("Transitioning to Neighborhood...")
-	
-	# Option 1: Simple scene change
 	get_tree().change_scene_to_file("res://Scenes/Neighborhood.tscn")
-	
-	# Option 2: With fade transition (uncomment the lines below and comment the line above)
-	# SceneTransition.fade_to_scene("res://Scenes/Neighborhood.tscn")
