@@ -3,6 +3,10 @@ extends CharacterBody3D
 @onready var ray: RayCast3D = $CameraPivot/Camera3D/InteractRay
 @onready var hand = $CameraPivot/Camera3D/Hand
 @onready var interaction_prompt := get_tree().get_current_scene().get_node("UI/InteractionPrompt")
+@onready var step_checks = $StepChecks
+@onready var fade_anim = $"../FadeLayer/FadeAnimator"
+@onready var player = $"."
+@onready var spawn_point = $"../PlayerSpawnPoint"
 
 
 var prompt_visible = false
@@ -12,6 +16,8 @@ var held_object: Node3D = null
 const SPEED = 5.0
 const JUMP_VELOCITY = 5
 const SPRINT_MULTIPLIER = 1.8
+const STEP_HEIGHT = 0.4
+const MAX_STEP_SLOPE = deg_to_rad(45)  # Only step on slopes less than 45 degrees
 
 @export var mouse_sensitivity := 0.002
 var yaw := 0.0
@@ -55,9 +61,27 @@ func _physics_process(delta):
 	var direction = Vector3(input_dir.x, 0, input_dir.y)
 	direction = (global_transform.basis * direction).normalized()
 
+	# Apply movement
 	if direction:
 		velocity.x = direction.x * current_speed
 		velocity.z = direction.z * current_speed
+
+		# Step check - loop through each RayCast3D
+		for check in step_checks.get_children():
+			if check is RayCast3D and check.is_colliding():
+				var hit_normal = check.get_collision_normal()
+				var hit_position = check.get_collision_point()
+
+		# Check that the hit surface is horizontal enough
+				var surface_angle = hit_normal.angle_to(Vector3.UP)
+				if surface_angle > MAX_STEP_SLOPE:
+					continue  # Too steep (like a wall), skip it
+
+		# Check the height difference
+				var step_height = hit_position.y - global_transform.origin.y
+				if step_height > 0 and step_height < STEP_HEIGHT:
+					translate(Vector3(0, STEP_HEIGHT, 0))
+					break
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
@@ -101,3 +125,10 @@ func _process(delta):
 					node.interact()
 					return
 				node = node.get_parent()
+	
+func kill_player():
+	fade_anim.play("fade_out_and_respawn")
+
+func respawn_player():
+	player.global_transform.origin = spawn_point.global_transform.origin
+	player.velocity = Vector3.ZERO
