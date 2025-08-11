@@ -1,0 +1,48 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://mqsfxd5mqsm3"
+path="res://.godot/imported/PotofGold.gltf-525262341035d447f5624e71e67b20ee.scn"
+
+[deps]
+
+source_file="res://Assets/pot_of_gold/PotofGold.gltf"
+dest_files=["res://.godot/imported/PotofGold.gltf-525262341035d447f5624e71e67b20ee.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Sketchfab_model/Pot of Gold_obj_cleaner_materialmerger_gles/Object_21": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Pot of Gold_obj_cleaner_materialmerger_gles/Object_22": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/Pot of Gold_obj_cleaner_materialmerger_gles/Object_23": {
+"generate/physics": true
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

@@ -1,7 +1,12 @@
 extends CharacterBody3D
 
 @onready var nav_agent = get_node("NavigationAgent3D")
-@onready var player = get_node("/root/TestHorror/Player")  # Adjust path if needed
+@onready var player = get_node("/root/TestHorror/Player")
+@onready var laugh = $Laugh
+@onready var scream = $Scream
+@onready var chaseSequence = $Chase
+@onready var anim_player = $ScaryLady/AnimationPlayer
+var previous_state = STATE_ROAMING
 
 enum {
 	STATE_ROAMING,
@@ -14,7 +19,6 @@ var roam_target = Vector3.ZERO
 var memory_time = 0.0
 
 const MEMORY_DURATION = 3.0
-const KILL_DISTANCE = 1.5
 
 
 var current_state = STATE_ROAMING
@@ -47,8 +51,11 @@ func can_see_player() -> bool:
 	return true
 
 
-
 func _physics_process(delta):
+	if current_state != previous_state:
+		_on_state_changed(previous_state, current_state)
+		previous_state = current_state
+		
 	match current_state:
 		STATE_ROAMING:
 			if can_see_player():
@@ -59,30 +66,40 @@ func _physics_process(delta):
 
 		STATE_CHASING:
 			if can_see_player():
-				memory_time = MEMORY_DURATION  # Reset memory if player is seen again
+				memory_time = MEMORY_DURATION
 				chase(delta)
 			else:
 				memory_time -= delta
 				if memory_time > 0:
-					chase(delta)  # Keep chasing during memory time
+					chase(delta)
 				else:
 					current_state = STATE_ROAMING
 
+func _on_state_changed(old_state, new_state):
+	if old_state == STATE_ROAMING and new_state == STATE_CHASING:
+		scream.play()
+		chaseSequence.play()
+	elif old_state == STATE_CHASING and new_state == STATE_ROAMING:
+		laugh.play()
 
+
+###########################################################################################
 func roam(delta):
+	laugh.play()
 	roam_timer -= delta
 	if roam_timer <= 0:
-		# Pick a new random location within range
 		var offset = Vector3(
 			randf_range(-10, 10),
 			0,
 			randf_range(-10, 10)
-		)
+			)
 		roam_target = global_transform.origin + offset
 		nav_agent.set_target_position(roam_target)
-		roam_timer = 3.0  # Pick a new point every 3 seconds
+		roam_timer = 3.0
 
 	if nav_agent.is_navigation_finished():
+		velocity = Vector3.ZERO
+		anim_player.stop()
 		return
 
 	var next_pos = nav_agent.get_next_path_position()
@@ -90,10 +107,23 @@ func roam(delta):
 	velocity = direction * speed
 	move_and_slide()
 
+	# Play walking animation only if moving
+	if velocity.length() > 0.1:
+		if anim_player.current_animation != "walking":
+			anim_player.play("walking")
+	else:
+		anim_player.stop()
+
+###########################################################################################
+
+###########################################################################################
 func chase(delta):
+	scream.play()
 	nav_agent.set_target_position(player.global_transform.origin)
 
 	if nav_agent.is_navigation_finished():
+		velocity = Vector3.ZERO
+		anim_player.stop()
 		return
 
 	var next_position = nav_agent.get_next_path_position()
@@ -101,9 +131,15 @@ func chase(delta):
 	velocity = direction * speed
 	move_and_slide()
 
-	# Check if player is within kill range
-	if global_transform.origin.distance_to(player.global_transform.origin) < KILL_DISTANCE:
-		kill_player()
+	if velocity.length() > 0.1:
+		if anim_player.current_animation != "walking":
+			anim_player.play("walking")
+	else:
+		anim_player.stop()
 
-func kill_player():
-	get_tree().get_root().get_node("Player").kill_player()
+############################################################################################
+
+
+func _on_player_detector_body_entered(body):
+	if body.name == "Player":
+		get_tree().reload_current_scene()

@@ -4,10 +4,6 @@ extends CharacterBody3D
 @onready var hand = $CameraPivot/Camera3D/Hand
 @onready var interaction_prompt := get_tree().get_current_scene().get_node("UI/InteractionPrompt")
 @onready var step_checks = $StepChecks
-@onready var fade_anim = $"../FadeLayer/FadeAnimator"
-@onready var player = $"."
-@onready var spawn_point = $"../PlayerSpawnPoint"
-
 
 var prompt_visible = false
 
@@ -125,10 +121,3 @@ func _process(delta):
 					node.interact()
 					return
 				node = node.get_parent()
-	
-func kill_player():
-	fade_anim.play("fade_out_and_respawn")
-
-func respawn_player():
-	player.global_transform.origin = spawn_point.global_transform.origin
-	player.velocity = Vector3.ZERO

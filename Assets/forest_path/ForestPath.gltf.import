@@ -1,0 +1,102 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bmnrvsktdhtrt"
+path="res://.godot/imported/ForestPath.gltf-e657c26aca09a34c28c6a2d750ac7ed3.scn"
+
+[deps]
+
+source_file="res://Assets/forest_path/ForestPath.gltf"
+dest_files=["res://.godot/imported/ForestPath.gltf-e657c26aca09a34c28c6a2d750ac7ed3.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_010": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_011": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_012": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_013": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_014": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_015": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_016": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_017": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_018": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_019": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_02": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_020": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_021": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_03": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_04": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_05": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_06": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_07": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_08": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/7d2e0e78d13046ef8ca5478e0928749e_fbx/RootNode/mesh_out_node/mesh_out_node_texture_material_09": {
+"generate/physics": true
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

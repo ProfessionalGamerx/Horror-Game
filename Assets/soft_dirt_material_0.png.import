@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dnlneuldc0jwg"
+path.s3tc="res://.godot/imported/soft_dirt_material_0.png-6cd0a02c3834f9b773c83bbadc8462e6.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "eeb1c9dce23910bc0ed0c37644b76449"
+}
+
+[deps]
+
+source_file="res://Assets/soft_dirt_material_0.png"
+dest_files=["res://.godot/imported/soft_dirt_material_0.png-6cd0a02c3834f9b773c83bbadc8462e6.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://b34v8lh72n5ww"]
+[gd_scene load_steps=10 format=3 uid="uid://b34v8lh72n5ww"]
 
 [ext_resource type="PackedScene" uid="uid://ce8pm58oamdv3" path="res://Assets/forest_house (1).glb" id="1_3kxmq"]
 [ext_resource type="Script" path="res://Scripts/player/Player.gd" id="2_vcjso"]
-[ext_resource type="PackedScene" uid="uid://ble6k470q8rmd" path="res://Assets/pot_of_gold_at_the_end_of_a_rainbow.glb" id="3_fve2q"]
 [ext_resource type="PackedScene" uid="uid://0pi2c558uvue" path="res://Assets/Animated Woman.glb" id="4_2ane1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_grrkv"]
@@ -103,9 +102,6 @@ grow_vertical = 0
 text = "Press E"
 horizontal_alignment = 1
 vertical_alignment = 2
-
-[node name="Pot of Gold" parent="." instance=ExtResource("3_fve2q")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -1.60977, 3.55006, -8.53905)
 
 [node name="DeadWoman" parent="." instance=ExtResource("4_2ane1")]
 transform = Transform3D(0.0389946, 0.498477, 1.70451e-09, -2.18557e-08, 9.55343e-16, 0.5, 0.498477, -0.0389946, 2.17891e-08, -2.20387, 3.77172, -3.94085)
