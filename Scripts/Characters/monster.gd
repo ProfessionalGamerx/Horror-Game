@@ -131,6 +131,12 @@ func chase(delta):
 	velocity = direction * speed
 	move_and_slide()
 
+# Smoothly rotate toward movement direction
+	if direction.length() > 0.01:
+		var target_rotation = atan2(direction.x, direction.z)
+		rotation.y = lerp_angle(rotation.y, target_rotation, delta * 5.0)  # 5.0 = turn speed
+
+
 	if velocity.length() > 0.1:
 		if anim_player.current_animation != "walking":
 			anim_player.play("walking")

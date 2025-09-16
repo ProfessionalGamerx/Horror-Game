@@ -1,0 +1,23 @@
+~ Branch1
+Larry: epic
+- yw
+	Larry: thank you
+- money pls
+	Larry: here you go
+Larry: k bye
+=> END
+
+~ Branch2
+Larry: Excellent work
+- here's your gold
+	Larry: k bye
+=> END
+
+~ Branch3
+Larry: My life is no longer in shambles
+- here's your gold
+	Larry: yippee
+- happy to help
+	Larry: thanks man
+Larry: k bye
+=> END

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://jeay2kg8are8"
+path="res://.godot/imported/LittleManCompletedQuest.dialogue-bbe142c47d7a634b638150f65b9bd6a0.tres"
+
+[deps]
+
+source_file="res://LittleManCompletedQuest.dialogue"
+dest_files=["res://.godot/imported/LittleManCompletedQuest.dialogue-bbe142c47d7a634b638150f65b9bd6a0.tres"]
+
+[params]
+
+defaults=true
