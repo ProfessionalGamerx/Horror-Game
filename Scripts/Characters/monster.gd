@@ -59,6 +59,7 @@ func _physics_process(delta):
 	match current_state:
 		STATE_ROAMING:
 			if can_see_player():
+				await get_tree().create_timer(2.0).timeout
 				current_state = STATE_CHASING
 				memory_time = MEMORY_DURATION
 			else:
