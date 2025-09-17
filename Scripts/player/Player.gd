@@ -4,6 +4,7 @@ extends CharacterBody3D
 @onready var hand = $CameraPivot/Camera3D/Hand
 @onready var interaction_prompt := get_tree().get_current_scene().get_node("UI/InteractionPrompt")
 @onready var step_checks = $StepChecks
+@onready var player_objective = $"../UI/Objective"
 
 var prompt_visible = false
 
@@ -11,7 +12,7 @@ var held_object: Node3D = null
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 5
-const SPRINT_MULTIPLIER = 1.8
+const SPRINT_MULTIPLIER = 1.4
 const STEP_HEIGHT = 0.4
 const MAX_STEP_SLOPE = deg_to_rad(45)  # Only step on slopes less than 45 degrees
 
@@ -24,6 +25,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	$MeshInstance3D.visible = false
+	current_objective()
 	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -89,7 +91,7 @@ func _process(delta):
 	var show_prompt = false
 
 	if held_object:
-		show_prompt = false  # Holding something, don't prompt
+		show_prompt = false
 	elif ray.is_colliding():
 		var hit = ray.get_collider()
 		var node = hit
@@ -121,3 +123,23 @@ func _process(delta):
 					node.interact()
 					return
 				node = node.get_parent()
+
+func current_objective():
+	var scene = get_tree().current_scene
+	if scene.name == "Neighborhood" and Global.interactedWithPotOfGold == false:
+		if Global.interactedWithLittleMan == false:
+			player_objective.text = "Talk to the Funny looking Man"
+		elif Global.interactedWithLittleMan == true:
+			player_objective.text = "Good boy! now go to your Lamborghini"
+	elif scene.name == "TestHorror":
+		player_objective.text = "You have arrived at his wife's last known address"
+		await get_tree().create_timer(8).timeout
+		player_objective.text = "She's gone insane in this maze, be careful of her!"
+		await get_tree().create_timer(8).timeout
+		player_objective.text = "Retrieve the Pot of Gold at the end of the Maze"
+		await get_tree().create_timer(12).timeout
+		player_objective.text = "Those patches of blood might lead the way out!"
+	elif scene.name == "Neighborhood" and Global.interactedWithPotOfGold == true:
+		player_objective.text = "Speak with the Little Man for your reward"
+	else:
+		print("No corresponding scene found.")

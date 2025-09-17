@@ -103,5 +103,22 @@ text = "Press E"
 horizontal_alignment = 1
 vertical_alignment = 2
 
+[node name="Objective" type="Label" parent="UI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 409.0
+offset_top = -626.0
+offset_right = 556.0
+offset_bottom = -603.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.884155, 0.810013, 1.92523e-06, 1)
+theme_override_font_sizes/font_size = 4
+horizontal_alignment = 1
+vertical_alignment = 2
+
 [node name="DeadWoman" parent="." instance=ExtResource("4_2ane1")]
 transform = Transform3D(0.0389946, 0.498477, 1.70451e-09, -2.18557e-08, 9.55343e-16, 0.5, 0.498477, -0.0389946, 2.17891e-08, -2.20387, 3.77172, -3.94085)

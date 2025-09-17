@@ -1,30 +1,38 @@
 ~ Branch1
-Larry: Help me
+Larry: Help me \n (Arrow Keys and enter to respond, do NOT click E)
 - Yah
 	Larry: ty
 	=>< Help
 - Nah
 	Larry: aww shucks
-- What? => Branch1
+- Where are the other people in this town?
+	Larry: idk they're all on vacation or something
+	=> Branch1
 Larry: Bye
 => END
 
 ~ Branch2
-Larry: Greetings I am in need of assistance
+Larry: Greetings I am in need of assistance \n (Arrow Keys and spacebar to respond, do NOT click E)
 - Help
 	Larry: Thank you kind soul
 	=>< Help
 - Not my problem
 	Larry: Rude
+- Where are the other people in this town?
+	Larry: idk they're all on vacation or something
+	=> Branch2
 Larry: bye
 => END
 
 ~ Branch3
-Larry: My life is in shambles
+Larry: My life is in shambles \n (Arrow Keys and spacebar to respond, do NOT click E)
 - Need any help?
 	=>< Help
 - Sucks to be you
 	Larry: That's mean
+- Where are the other people in this town?
+	Larry: idk they're all on vacation or something
+	=> Branch3
 Larry: Bye
 => END
 

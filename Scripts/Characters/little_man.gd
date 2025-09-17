@@ -2,6 +2,7 @@ extends Node3D
 
 @export var dialogue: DialogueResource;
 @export var completedDialogue: DialogueResource;
+@onready var Player = $"../Player"
 
 func interact():
 	if Global.interactedWithPotOfGold == true:
@@ -15,3 +16,4 @@ func interact():
 		var chosen = branches[randi() % branches.size()]
 		DialogueManager.show_dialogue_balloon(dialogue, chosen)
 		Global.interactedWithLittleMan = true
+		Player.current_objective()

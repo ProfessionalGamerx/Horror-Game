@@ -110,6 +110,23 @@ text = "Press E"
 horizontal_alignment = 1
 vertical_alignment = 2
 
+[node name="Objective" type="Label" parent="UI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -355.0
+offset_top = -646.0
+offset_right = 508.0
+offset_bottom = -560.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.884155, 0.810013, 1.92523e-06, 1)
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 2
+vertical_alignment = 2
+
 [node name="PlayerCar" parent="." instance=ExtResource("8_5j5y8")]
 transform = Transform3D(0.000616702, 0, -0.0199905, 0, 0.02, 0, 0.0199905, 0, 0.000616702, -0.714322, 4.45834, -20.833)
 script = ExtResource("9_ykqq5")

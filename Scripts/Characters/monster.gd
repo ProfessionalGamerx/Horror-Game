@@ -6,6 +6,8 @@ extends CharacterBody3D
 @onready var scream = $Scream
 @onready var chaseSequence = $Chase
 @onready var anim_player = $ScaryLady/AnimationPlayer
+@onready var jumpscare = $"../UI/Jumpscare"
+@onready var jumpscare_audio = $JumpscareAudio
 var previous_state = STATE_ROAMING
 
 enum {
@@ -13,15 +15,40 @@ enum {
 	STATE_CHASING
 }
 
-var speed = 6.0
+var speed = 5.5
 var roam_timer = 0.0
 var roam_target = Vector3.ZERO
 var memory_time = 0.0
-
 const MEMORY_DURATION = 3.0
-
-
 var current_state = STATE_ROAMING
+
+func _ready():
+	var textures = [
+		"res://jumpscares/grudge.jpg",
+		"res://jumpscares/alternate.webp",
+		"res://jumpscares/mandela.jpg",
+		"res://jumpscares/mari.jpg",
+		"res://jumpscares/nomouthtoscream.jpeg",
+		"res://jumpscares/whatthehelly.jpg"
+	]
+	
+	var sounds = [
+		"res://Sounds/long-howl-whale-and-monster-37270.mp3",
+		"res://Sounds/loud-scream-sfx-earrape-warning.mp3",
+		"res://Sounds/superfast-crunch-405118.mp3",
+		"res://Sounds/zombie-moan-44932.mp3"
+	]
+	
+	# the array size is 6 since it has six different entries but since arrays start with its first index at 0,
+	# the last valid index is 5, not 6. That's why we use (textures.size() - 1) as the upper bound,
+	# so randi_range(0, 5) correctly picks one of the six entries without going out of range.
+	# also good for future-proofing because this makes the code flexible instead of having a hardcoded value.
+	var rolled_number = randi_range(0, textures.size() - 1)
+	jumpscare.texture = load(textures[rolled_number])
+	jumpscare.visible = false
+	
+	var rolled_number_audio = randi_range(0, sounds.size() - 1)
+	jumpscare_audio.stream = load(sounds[rolled_number_audio])
 
 
 func can_see_player() -> bool:
@@ -59,7 +86,6 @@ func _physics_process(delta):
 	match current_state:
 		STATE_ROAMING:
 			if can_see_player():
-				await get_tree().create_timer(2.0).timeout
 				current_state = STATE_CHASING
 				memory_time = MEMORY_DURATION
 			else:
@@ -86,7 +112,7 @@ func _on_state_changed(old_state, new_state):
 
 ###########################################################################################
 func roam(delta):
-	laugh.play()
+	scream.play()
 	roam_timer -= delta
 	if roam_timer <= 0:
 		var offset = Vector3(
@@ -119,7 +145,8 @@ func roam(delta):
 
 ###########################################################################################
 func chase(delta):
-	scream.play()
+	laugh.play()
+	await get_tree().create_timer(0.5).timeout
 	nav_agent.set_target_position(player.global_transform.origin)
 
 	if nav_agent.is_navigation_finished():
@@ -149,4 +176,7 @@ func chase(delta):
 
 func _on_player_detector_body_entered(body):
 	if body.name == "Player":
+		jumpscare.visible = true
+		jumpscare_audio.play()
+		await jumpscare_audio.finished
 		get_tree().reload_current_scene()
