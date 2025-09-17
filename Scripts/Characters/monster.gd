@@ -29,7 +29,8 @@ func _ready():
 		"res://jumpscares/mandela.jpg",
 		"res://jumpscares/mari.jpg",
 		"res://jumpscares/nomouthtoscream.jpeg",
-		"res://jumpscares/whatthehelly.jpg"
+		"res://jumpscares/whatthehelly.jpg",
+		"res://jumpscares/67.jpeg"
 	]
 	
 	var sounds = [
